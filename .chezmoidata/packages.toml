@@ -1,0 +1,61 @@
+[core]
+taps = ['homebrew/bundle',
+        'homebrew/services', 
+        'homebrew/cask-fonts']
+brews = ['mas',
+         'chezmoi',
+         'fish',
+         'fisher']
+casks = ['1password']
+vscodes = []
+
+[ide]
+taps = []
+brews = []
+casks = ["visual-studio-code"]
+vscodes = ["PenumbraTheme.penumbra", 
+           "GitHub.copilot", 
+           "GitHub.copilot-chat", 
+           "Willumz.generic-pseudocode", 
+           "hediet.debug-visualizer", 
+           "ms-vscode.hexeditor", 
+           "EdwinHuiSH.better-comments-next"]
+
+[utils]
+taps = []
+brews = ["cheat", # better man page
+         "tre",  # better tree
+         "trash", #CLI tool that moves files or folder to the trash
+         "ugrep", 
+         "bat", # better cat
+         "bat-extras", 
+         "eza", # better ls
+         "zoxide", # Easy navigation (better cd)
+         "fzf", # Fuzzy finder
+         "d2"] # Diagramming tool
+casks = []         
+vscodes = ["terrastruct.d2"]
+
+[shell]
+taps = []
+brews = ["shfmt", # Autoformat shell script source code
+         "shellcheck"] # Static analysis tool for shell scripts
+casks = []         
+vscodes = ["foxundermoon.shell-format", 
+           "timonwong.shellcheck", 
+           "bmalehorn.vscode-fish"]  
+
+[apps]
+taps = []
+brews = []
+casks = [
+         "github", # GitHub Desktop (Great for squashing Large # of Commits)
+         ]
+vscodes = []                  
+
+
+
+
+
+
+
