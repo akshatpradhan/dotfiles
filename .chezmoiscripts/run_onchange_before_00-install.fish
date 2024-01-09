@@ -25,6 +25,4 @@ cask {{ . | quote }}
 {{ end -}}
 {{ range .ide.vscodes -}}
 vscode {{ . | quote }}
-{{ end -}}
-
-' | brew bundle --no-lock --file=/dev/stdin
+{{ end -}}' | brew bundle --no-lock --file=/dev/stdin
