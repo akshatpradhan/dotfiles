@@ -51,12 +51,29 @@ vscodes = ["AngaBlue.asm-formatter",
            "kdarkhan.mips", 
            "teros-technology.teroshdl"]
 
+[ruby]
+brews = ["rbenv", 
+         "ruby-build", 
+         "libyaml"]  
+
 [python]           
-brews = ["pyenv", "xz"]
+brews = ["pyenv", 
+         "xz"]
 vscodes = ["ms-python.black-formatter", 
            "ms-python.python", 
            "ms-python.vscode-pylance", 
            "njpwerner.autodocstring"]
+
+
+[manim]
+brews =  ["ffmpeg", 
+          "pango", 
+          "pkg-config", 
+          "qt5", 
+          "py3cairo", # pip install pycairo
+          "scipy",] # pip install scipy
+
+vscodes = ["Rickaym.manim-sideview"]
 
 [utils]
 brews = ["cheat", 
@@ -68,7 +85,26 @@ brews = ["cheat",
          "bat-extras", 
          "eza",
          "d2"]
-vscodes = ["terrastruct.d2"]               
+vscodes = ["terrastruct.d2"]
+
+[apps]
+casks = ["rectangle", # Window manager
+         "breaktimer", # Pomodoro timer
+         "alt-tab", # Better alt-tab
+         "shottr", # Screenshot tool
+         "obsidian", # Note taking
+         "mullvad-browser", # Private Browser
+         "mimestream", # Email client
+         "discord", # Chat
+         "arc", # Better Chrome
+         "maccy", # Clipboard manager
+         "iina", # Better VLC
+         "adobe-acrobat-pro", #"adobe-acrobat-pro"
+         "zoom", # Video conferencing
+         "motrix", # Torrent client
+         "cyberduck", # File transfer client
+         "skype", # Video conferencing
+         "anylist"]# Grocery list
 
 
 
