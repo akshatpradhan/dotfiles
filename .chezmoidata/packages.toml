@@ -1,25 +1,12 @@
-packages:
-  taps:
-    - 'homebrew/bundle'
-    - 'homebrew/services'
-    - 'homebrew/cask-fonts'
-  brews:
-    - 'mas'
-    - 'chezmoi'
-    - 'fish'
-    - 'fisher'
-  casks:
-    - '1password'
-
-# [packages]
-# taps = ['homebrew/bundle',
-#         'homebrew/services', 
-#         'homebrew/cask-fonts']
-# brews = ['mas',
-#          'chezmoi',
-#          'fish',
-#          'fisher']
-# casks = ['1password']
+[packages]
+taps = ['homebrew/bundle',
+        'homebrew/services', 
+        'homebrew/cask-fonts']
+brews = ['mas',
+         'chezmoi',
+         'fish',
+         'fisher']
+casks = ['1password']
 
 # [ide]
 # casks = ["visual-studio-code"]
