@@ -1,4 +1,4 @@
-[core]
+[packages]
 taps = ['homebrew/bundle',
         'homebrew/services', 
         'homebrew/cask-fonts']
@@ -8,103 +8,103 @@ brews = ['mas',
          'fisher']
 casks = ['1password']
 
-[ide]
-casks = ["visual-studio-code"]
-vscodes = ["PenumbraTheme.penumbra", 
-           "GitHub.copilot", 
-           "GitHub.copilot-chat", 
-           "Willumz.generic-pseudocode", 
-           "hediet.debug-visualizer", 
-           "ms-vscode.hexeditor", 
-           "EdwinHuiSH.better-comments-next"]
+# [ide]
+# casks = ["visual-studio-code"]
+# vscodes = ["PenumbraTheme.penumbra", 
+#            "GitHub.copilot", 
+#            "GitHub.copilot-chat", 
+#            "Willumz.generic-pseudocode", 
+#            "hediet.debug-visualizer", 
+#            "ms-vscode.hexeditor", 
+#            "EdwinHuiSH.better-comments-next"]
 
-[cpp]
-brews = ["gcc", 
-         "clang-format", 
-         "catch2"]
-vscodes = ["ms-vscode.cpptools", 
-           "cschlosser.doxdocgen", 
-           "jeff-hykin.better-cpp-syntax", 
-           "Hyeon.c-math-viewer"]
+# [cpp]
+# brews = ["gcc", 
+#          "clang-format", 
+#          "catch2"]
+# vscodes = ["ms-vscode.cpptools", 
+#            "cschlosser.doxdocgen", 
+#            "jeff-hykin.better-cpp-syntax", 
+#            "Hyeon.c-math-viewer"]
 
-[shell]
-brews = ["shfmt", 
-         "shellcheck"]
-vscodes = ["foxundermoon.shell-format", 
-           "timonwong.shellcheck", 
-           "bmalehorn.vscode-fish"]
+# [shell]
+# brews = ["shfmt", 
+#          "shellcheck"]
+# vscodes = ["foxundermoon.shell-format", 
+#            "timonwong.shellcheck", 
+#            "bmalehorn.vscode-fish"]
 
-[cs_225]
-casks = ["docker"]
-vscodes = ["ms-vscode-remote.remote-containers", 
-           "ms-vscode-remote.remote-ssh", 
-           "ms-vscode-remote.remote-ssh-edit", 
-           "ms-vscode.remote-explorer"]
+# [cs_225]
+# casks = ["docker"]
+# vscodes = ["ms-vscode-remote.remote-containers", 
+#            "ms-vscode-remote.remote-ssh", 
+#            "ms-vscode-remote.remote-ssh-edit", 
+#            "ms-vscode.remote-explorer"]
 
-[cs_233]
-taps = ["chipsalliance/verible",
-        "randomplum/gtkwave"]
-brews = ["icarus-verilog"]
-casks = ["verible", 
-         "gtkwave"]
-vscodes = ["AngaBlue.asm-formatter", 
-           "kdarkhan.mips", 
-           "teros-technology.teroshdl"]
+# [cs_233]
+# taps = ["chipsalliance/verible",
+#         "randomplum/gtkwave"]
+# brews = ["icarus-verilog"]
+# casks = ["verible", 
+#          "gtkwave"]
+# vscodes = ["AngaBlue.asm-formatter", 
+#            "kdarkhan.mips", 
+#            "teros-technology.teroshdl"]
 
-[ruby]
-brews = ["rbenv", 
-         "ruby-build", 
-         "libyaml"]  
+# [ruby]
+# brews = ["rbenv", 
+#          "ruby-build", 
+#          "libyaml"]  
 
-[python]           
-brews = ["pyenv", 
-         "xz"]
-vscodes = ["ms-python.black-formatter", 
-           "ms-python.python", 
-           "ms-python.vscode-pylance", 
-           "njpwerner.autodocstring"]
+# [python]           
+# brews = ["pyenv", 
+#          "xz"]
+# vscodes = ["ms-python.black-formatter", 
+#            "ms-python.python", 
+#            "ms-python.vscode-pylance", 
+#            "njpwerner.autodocstring"]
 
 
-[manim]
-brews =  ["ffmpeg", 
-          "pango", 
-          "pkg-config", 
-          "qt5", 
-          "py3cairo", # pip install pycairo
-          "scipy",] # pip install scipy
+# [manim]
+# brews =  ["ffmpeg", 
+#           "pango", 
+#           "pkg-config", 
+#           "qt5", 
+#           "py3cairo", # pip install pycairo
+#           "scipy",] # pip install scipy
 
-vscodes = ["Rickaym.manim-sideview"]
+# vscodes = ["Rickaym.manim-sideview"]
 
-[utils]
-brews = ["cheat", 
-         "tree", 
-         "tldr", 
-         "trash", 
-         "ugrep", 
-         "bat", 
-         "bat-extras", 
-         "eza",
-         "d2"]
-vscodes = ["terrastruct.d2"]
+# [utils]
+# brews = ["cheat", 
+#          "tree", 
+#          "tldr", 
+#          "trash", 
+#          "ugrep", 
+#          "bat", 
+#          "bat-extras", 
+#          "eza",
+#          "d2"]
+# vscodes = ["terrastruct.d2"]
 
-[apps]
-casks = ["rectangle", # Window manager
-         "breaktimer", # Pomodoro timer
-         "alt-tab", # Better alt-tab
-         "shottr", # Screenshot tool
-         "obsidian", # Note taking
-         "mullvad-browser", # Private Browser
-         "mimestream", # Email client
-         "discord", # Chat
-         "arc", # Better Chrome
-         "maccy", # Clipboard manager
-         "iina", # Better VLC
-         "adobe-acrobat-pro", #"adobe-acrobat-pro"
-         "zoom", # Video conferencing
-         "motrix", # Torrent client
-         "cyberduck", # File transfer client
-         "skype", # Video conferencing
-         "anylist"]# Grocery list
+# [apps]
+# casks = ["rectangle", # Window manager
+#          "breaktimer", # Pomodoro timer
+#          "alt-tab", # Better alt-tab
+#          "shottr", # Screenshot tool
+#          "obsidian", # Note taking
+#          "mullvad-browser", # Private Browser
+#          "mimestream", # Email client
+#          "discord", # Chat
+#          "arc", # Better Chrome
+#          "maccy", # Clipboard manager
+#          "iina", # Better VLC
+#          "adobe-acrobat-pro", #"adobe-acrobat-pro"
+#          "zoom", # Video conferencing
+#          "motrix", # Torrent client
+#          "cyberduck", # File transfer client
+#          "skype", # Video conferencing
+#          "anylist"]# Grocery list
 
 
 

@@ -1,14 +1,8 @@
 #!/usr/bin/env fish
 eval "$(/opt/homebrew/bin/brew shellenv)"
-echo '{{ range .core.taps -}}
-tap {{ . | quote }}
-{{ end -}}
-{{ range .core.brews -}}
+echo '{{ range .packages.brews -}}
 brew {{ . | quote }}
 {{ end -}}
-{{ range .core.casks -}}
+{{ range .packages.casks -}}
 cask {{ . | quote }}
-{{ end -}}
-{{ range .core.vscodes -}}
-vscode {{ . | quote }}
 {{ end -}}' | brew bundle --no-lock --file=/dev/stdin
