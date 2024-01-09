@@ -2,11 +2,14 @@ tap "homebrew/bundle"
 tap "homebrew/services"
 tap "homebrew/cask-fonts"
 
-# Utilities
+# Core
 brew "mas"
 brew "chezmoi"
 brew "fish"
 brew "fisher"
+cask "1password"
+
+# Utilities
 brew "cheat"
 brew "tree"
 brew "tldr"
@@ -17,67 +20,104 @@ brew "bat-extras"
 brew "eza"
 
 # Programming Language Tools
-## C++ Development
-# brew "gcc"
-# brew "clang-format"
-# brew "catch2"
-# vscode "cschlosser.doxdocgen"
-# vscode "hediet.debug-visualizer"
+cask "visual-studio-code"
+vscode "PenumbraTheme.penumbra"
+vscode "GitHub.copilot"
+vscode "GitHub.copilot-chat"
+vscode "Willumz.generic-pseudocode"
+vscode "hediet.debug-visualizer"
+vscode "ms-vscode.hexeditor"
+vscode "EdwinHuiSH.better-comments-next"
 
-## Ruby
+# C++ Development
+brew "gcc"
+brew "clang-format"
+brew "catch2"
+vscode "ms-vscode.cpptools"
+vscode "cschlosser.doxdocgen"
+vscode "jeff-hykin.better-cpp-syntax"
+vscode "Hyeon.c-math-viewer"
+
+# Shell
+brew "shfmt" # Autoformat shell script source code
+brew "shellcheck" # Static analysis tool for shell scripts
+vscode "foxundermoon.shell-format"
+vscode "timonwong.shellcheck"
+vscode "bmalehorn.vscode-fish"
+
+# CS 225
+cask "docker"
+vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode-remote.remote-ssh"
+vscode "ms-vscode-remote.remote-ssh-edit"
+vscode "ms-vscode.remote-explorer"
+
+# CS 233
+tap chipsalliance/verible
+cask "verible"
+tap randomplum/gtkwave
+cask "gtkwave"
+brew "icarus-verilog"
+vscode "AngaBlue.asm-formatter"
+vscode "kdarkhan.mips"
+vscode "teros-technology.teroshdl" # Verilog Formatter and Syntax Highlight
+
+# Python
+brew "pyenv"
+brew "xz"
+vscode "ms-python.black-formatter"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "njpwerner.autodocstring"
+
+# Manim 
+# vscode "Rickaym.manim-sideview"
+# brew "ffmpeg"
+# brew "pango" 
+# brew "pkg-config"
+# brew "qt5"
+# brew "py3cairo" # pip install pycairo
+# brew "scipy" # pip install scipy
+# cask "mactex-no-gui"
+
+# Ruby
 # brew "rbenv"
-#brew "ruby-build"
-#brew "libyaml"
+# brew "ruby-build"
+# brew "libyaml"
 
-## Python
-# brew "pyenv"
-#brew "xz"
-# vscode "ms-python.black-formatter"
-# vscode "ms-python.python"
-# vscode "ms-python.vscode-pylance"
 
-## Shell
-# brew "shfmt" # Autoformat shell script source code
-# brew "shellcheck" # Static analysis tool for shell scripts
-# vscode "foxundermoon.shell-format"
+
+brew "d2" # Diagramming tool
+vscode "terrastruct.d2"
+
+
+
 
 # Applications not in Mac App Store
 #cask "google-chrome"
-# cask "visual-studio-code"
-
-
-# vscode "dksedgwick.xstviz"
-
-# vscode "GitHub.copilot"
-# vscode "GitHub.copilot-chat"
-
-# vscode "jeff-hykin.better-cpp-syntax"
-
-
-# vscode "ms-vscode-remote.remote-containers"
-# vscode "ms-vscode-remote.remote-ssh"
-# vscode "ms-vscode-remote.remote-ssh-edit"
-# vscode "ms-vscode.cpptools"
-# vscode "ms-vscode.hexeditor"
-# vscode "ms-vscode.remote-explorer"
-# vscode "PenumbraTheme.penumbra"
-# vscode "Rickaym.manim-sideview"
-# vscode "teros-technology.teroshdl"
-# vscode "timonwong.shellcheck"
-# vscode "tzylee.verilog-highlight"
-# vscode "Willumz.generic-pseudocode"
 
 ##### Productivity
-# cask "rectangle"
-# cask "breaktimer"
-# cask "alt-tab"
-# cask "shottr"
-# cask "obsidian"
-# cask "mullvad-browser"
-# cask "mimestream"
-# cask "discord"
-# cask "arc"
-# cask "maccy"
+# cask "rectangle" # Window manager
+# cask "breaktimer" # Pomodoro timer
+# cask "alt-tab" # Better alt-tab
+# cask "shottr" # Screenshot tool
+# cask "obsidian" # Note taking
+# cask "mullvad-browser" # Private Browser
+# cask "mimestream" # Email client
+# cask "discord" # Chat
+# cask "arc" # Better Chrome
+# cask "maccy" # Clipboard manager
+# cask "iina" # Better VLC
+# cask "adobe-acrobat-pro"
+# cask "zoom" # Video conferencing
+# cask "transmission" # Torrent client
+# cask "cyberduck" # File transfer client
+# cask "skype"  # Video conferencing
+# cask "anylist" # Grocery list
+
+
+
+
 # Maybe ReadWise to save highlights from books, articles, etc
 # But only if PopClip seems useful. So far, the only thing that seems useful is the copy as Markdown
 # The ChatGPT extensions for PopClip doesn't seem all that great.
@@ -89,48 +129,13 @@ brew "eza"
 # Bolt AI because it's beautiful
 # Intellibar because it's a menu bar that you can copy and paste into anything
 # Quartzite AI because it manages Prompts
-# HyperKey for remapping shortcuts
+
 ##### Calculator
+# Only Calca might do half-adders
 # Soulver or Numi Or Calca (Calca show's Half Adder in screenshot, so might be best option)
 # Soulver has multiple sheets, so has lots of organization
 # Numi is newest and has the newest UI
 
 #### Applications not needed for our testing purposes yet
-# cask "adobe-acrobat-pro"
-# cask "iina" # Replaces VLC
-# cask "zoom"
-# cask "transmission"
-# cask "cyberduck"
-# cask "skype" 
-# cask "anylist"
+
 # cask "kap" # Screen recording but screenity chrome extension might be better
-
-#### CS 233
-# tap chipsalliance/verible
-# cask "verible"
-# tap randomplum/gtkwave
-# cask "gtkwave"
-# brew "icarus-verilog"
-# vscode "AngaBlue.asm-formatter"
-# vscode "chipsalliance.verible"
-# vscode "kdarkhan.mips"
-
-
-
-### CS 225
-# cask "docker"
-
-
-
-### Manim Animation
-# brew "ffmpeg"
-# brew "pango" 
-# brew "pkg-config"
-# brew "qt5"
-# brew "py3cairo" # pip install pycairo
-# brew "scipy" # pip install scipy
-# cask "mactex-no-gui"
-
-# brew "d2" # Diagramming tool
-
-

@@ -1,0 +1,22 @@
+[core]
+taps = ['homebrew/bundle', 
+        'homebrew/services', 
+        'homebrew/cask-fonts']
+brews = ['mas',
+         'chezmoi',
+         'fish',
+         'fisher']
+casks = ['1password']
+
+[utilities]
+brews = ["cheat", 
+         "tree", 
+         "tldr", 
+         "trash", 
+         "ugrep", 
+         "bat", 
+         "bat-extras", 
+         "eza"]
+
+
+
