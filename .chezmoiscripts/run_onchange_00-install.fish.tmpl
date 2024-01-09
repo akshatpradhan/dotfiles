@@ -12,4 +12,17 @@ cask {{ . | quote }}
 {{ end -}}
 {{ range .core.vscodes -}}
 vscode {{ . | quote }}
-{{ end -}}' | brew bundle --no-lock --file=/dev/stdin
+{{ end -}}
+{{ range .ide.taps -}}
+tap {{ . | quote }}
+{{ end -}}
+{{ range .ide.brews -}}
+brew {{ . | quote }}
+{{ end -}}
+{{ range .ide.casks -}}
+cask {{ . | quote }}
+{{ end -}}
+{{ range .ide.vscodes -}}
+vscode {{ . | quote }}
+{{ end -}}
+' | brew bundle --no-lock --file=/dev/stdin
