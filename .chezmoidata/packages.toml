@@ -80,17 +80,18 @@ vscodes = ["ms-python.black-formatter",
            "njpwerner.autodocstring"]
 
 
-# [manim]
-# taps = []
+[manim]
+taps = []
+brews = []
+
 # brews =  ["ffmpeg", 
 #           "pango", 
 #           "pkg-config", 
-#           "qt5", 
 #           "py3cairo", # pip install pycairo
 #           "scipy",] # pip install scipy
 # pip install manim?
-# casks = []
-# vscodes = ["Rickaym.manim-sideview"]
+casks = []
+vscodes = [] # ["Rickaym.manim-sideview"]
 
 [utils]
 taps = []
