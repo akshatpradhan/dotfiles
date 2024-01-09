@@ -108,17 +108,45 @@ cask {{ . | quote }}
 vscode {{ . | quote }}
 {{ end -}}
 
-{{ range .manim.taps -}}
+# {{ range .manim.taps -}}
+# tap {{ . | quote }}
+# {{ end -}}
+# {{ range .manim.brews -}}
+# brew {{ . | quote }}
+# {{ end -}}
+# {{ range .manim.casks -}}
+# cask {{ . | quote }}
+# {{ end -}}
+# {{ range .manim.vscodes -}}
+# vscode {{ . | quote }}
+# {{ end -}}
+
+
+{{ range .utils.taps -}}
 tap {{ . | quote }}
 {{ end -}}
-{{ range .manim.brews -}}
+{{ range .utils.brews -}}
 brew {{ . | quote }}
 {{ end -}}
-{{ range .manim.casks -}}
+{{ range .utils.casks -}}
 cask {{ . | quote }}
 {{ end -}}
-{{ range .manim.vscodes -}}
+{{ range .utils.vscodes -}}
 vscode {{ . | quote }}
 {{ end -}}
+
+{{ range .apps.taps -}}
+tap {{ . | quote }}
+{{ end -}}
+{{ range .apps.brews -}}
+brew {{ . | quote }}
+{{ end -}}
+{{ range .apps.casks -}}
+cask {{ . | quote }}
+{{ end -}}
+{{ range .apps.vscodes -}}
+vscode {{ . | quote }}
+{{ end -}}
+
 
 ' | brew bundle --no-lock --file=/dev/stdin
