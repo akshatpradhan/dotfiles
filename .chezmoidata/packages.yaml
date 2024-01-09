@@ -1,5 +1,11 @@
 packages:
+    taps:
+    - 'homebrew/bundle'
+    - 'homebrew/cask'
+    - 'homebrew/services'
+    - 'homebrew/cask-fonts'
     brews:
-    - fisher
+    - 'fisher'
     casks:
-    - rectangle
+    - 'rectangle'
+
