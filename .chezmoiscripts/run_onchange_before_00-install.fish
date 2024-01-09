@@ -4,7 +4,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 set packages core ide cpp
 
 for package in $packages do
-    echo "
+    echo '
     {{ range .$package.taps -}}
     tap {{ . | quote }}
     {{ end -}}
@@ -17,7 +17,7 @@ for package in $packages do
     {{ range .$package.vscodes -}}
     vscode {{ . | quote }}
     {{ end -}}
-    " | brew bundle --no-lock --file=/dev/stdin
+    ' | brew bundle --no-lock --file=/dev/stdin
 end
 
 
