@@ -1,10 +1,12 @@
-tap "homebrew/core"
-tap "homebrew/cask"
 tap "homebrew/bundle"
 tap "homebrew/services"
 tap "homebrew/cask-fonts"
 
 # Utilities
+brew "mas"
+brew "chezmoi"
+brew "fish"
+brew "fisher"
 brew "cheat"
 brew "tree"
 brew "tldr"
@@ -16,62 +18,66 @@ brew "eza"
 
 # Programming Language Tools
 ## C++ Development
-brew "gcc"
-brew "clang-format"
-brew "catch2"
+# brew "gcc"
+# brew "clang-format"
+# brew "catch2"
+# vscode "cschlosser.doxdocgen"
+# vscode "hediet.debug-visualizer"
 
 ## Ruby
-brew "rbenv"
+# brew "rbenv"
 #brew "ruby-build"
 #brew "libyaml"
 
 ## Python
-brew "pyenv"
+# brew "pyenv"
 #brew "xz"
+# vscode "ms-python.black-formatter"
+# vscode "ms-python.python"
+# vscode "ms-python.vscode-pylance"
 
 ## Shell
-brew "shfmt" # Autoformat shell script source code
-brew "shellcheck" # Static analysis tool for shell scripts
+# brew "shfmt" # Autoformat shell script source code
+# brew "shellcheck" # Static analysis tool for shell scripts
+# vscode "foxundermoon.shell-format"
 
 # Applications not in Mac App Store
 #cask "google-chrome"
-cask "visual-studio-code"
+# cask "visual-studio-code"
 
-vscode "cschlosser.doxdocgen"
-vscode "dksedgwick.xstviz"
-vscode "foxundermoon.shell-format"
-vscode "GitHub.copilot"
-vscode "GitHub.copilot-chat"
-vscode "hediet.debug-visualizer"
-vscode "jeff-hykin.better-cpp-syntax"
 
-vscode "ms-python.black-formatter"
-vscode "ms-python.python"
-vscode "ms-python.vscode-pylance"
-vscode "ms-vscode-remote.remote-containers"
-vscode "ms-vscode-remote.remote-ssh"
-vscode "ms-vscode-remote.remote-ssh-edit"
-vscode "ms-vscode.cpptools"
-vscode "ms-vscode.hexeditor"
-vscode "ms-vscode.remote-explorer"
-vscode "PenumbraTheme.penumbra"
-vscode "Rickaym.manim-sideview"
-vscode "teros-technology.teroshdl"
-vscode "timonwong.shellcheck"
-vscode "tzylee.verilog-highlight"
-vscode "Willumz.generic-pseudocode"
+# vscode "dksedgwick.xstviz"
+
+# vscode "GitHub.copilot"
+# vscode "GitHub.copilot-chat"
+
+# vscode "jeff-hykin.better-cpp-syntax"
+
+
+# vscode "ms-vscode-remote.remote-containers"
+# vscode "ms-vscode-remote.remote-ssh"
+# vscode "ms-vscode-remote.remote-ssh-edit"
+# vscode "ms-vscode.cpptools"
+# vscode "ms-vscode.hexeditor"
+# vscode "ms-vscode.remote-explorer"
+# vscode "PenumbraTheme.penumbra"
+# vscode "Rickaym.manim-sideview"
+# vscode "teros-technology.teroshdl"
+# vscode "timonwong.shellcheck"
+# vscode "tzylee.verilog-highlight"
+# vscode "Willumz.generic-pseudocode"
 
 ##### Productivity
-cask "rectangle"
-cask "breaktimer"
-cask "alt-tab"
-cask "shottr"
-cask "obsidian"
-cask "mullvad-browser"
-cask "mimestream"
-cask "discord"
-cask "arc"
-cask "maccy"
+# cask "rectangle"
+# cask "breaktimer"
+# cask "alt-tab"
+# cask "shottr"
+# cask "obsidian"
+# cask "mullvad-browser"
+# cask "mimestream"
+# cask "discord"
+# cask "arc"
+# cask "maccy"
 # Maybe ReadWise to save highlights from books, articles, etc
 # But only if PopClip seems useful. So far, the only thing that seems useful is the copy as Markdown
 # The ChatGPT extensions for PopClip doesn't seem all that great.
@@ -112,7 +118,7 @@ cask "maccy"
 
 
 ### CS 225
-cask "docker"
+# cask "docker"
 
 
 
