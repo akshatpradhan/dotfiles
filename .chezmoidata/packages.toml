@@ -1,5 +1,5 @@
 [core]
-taps = ['homebrew/bundle', 
+taps = ['homebrew/bundle',
         'homebrew/services', 
         'homebrew/cask-fonts']
 brews = ['mas',
@@ -17,6 +17,16 @@ brews = ["cheat",
          "bat", 
          "bat-extras", 
          "eza"]
+
+[ide]
+casks = ["visual-studio-code"]
+vscodes = ["PenumbraTheme.penumbra", 
+           "GitHub.copilot", 
+           "GitHub.copilot-chat", 
+           "Willumz.generic-pseudocode", 
+           "hediet.debug-visualizer", 
+           "ms-vscode.hexeditor", 
+           "EdwinHuiSH.better-comments-next"]
 
 
 

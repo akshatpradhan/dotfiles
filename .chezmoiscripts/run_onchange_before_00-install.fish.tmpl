@@ -10,4 +10,19 @@ brew {{ . | quote }}
 {{ end -}}
 {{ range .core.casks -}}
 cask {{ . | quote }}
-{{ end -}}' | brew bundle --no-lock --file=/dev/stdin
+{{ end -}}
+
+
+{{ range .utilities.brews -}}
+brew {{ . | quote }}
+{{ end -}}
+
+{{ range .ide.casks -}}
+cask {{ . | quote }}
+{{ end -}}
+{{ range .ide.vscodes -}}
+vscode {{ . | quote }}
+{{ end -}}
+
+
+' | brew bundle --no-lock --file=/dev/stdin
