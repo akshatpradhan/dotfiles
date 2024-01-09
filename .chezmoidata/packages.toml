@@ -8,16 +8,6 @@ brews = ['mas',
          'fisher']
 casks = ['1password']
 
-[utilities]
-brews = ["cheat", 
-         "tree", 
-         "tldr", 
-         "trash", 
-         "ugrep", 
-         "bat", 
-         "bat-extras", 
-         "eza"]
-
 [ide]
 casks = ["visual-studio-code"]
 vscodes = ["PenumbraTheme.penumbra", 
@@ -27,6 +17,62 @@ vscodes = ["PenumbraTheme.penumbra",
            "hediet.debug-visualizer", 
            "ms-vscode.hexeditor", 
            "EdwinHuiSH.better-comments-next"]
+
+[cpp]
+brews = ["gcc", 
+         "clang-format", 
+         "catch2"]
+vscodes = ["ms-vscode.cpptools", 
+           "cschlosser.doxdocgen", 
+           "jeff-hykin.better-cpp-syntax", 
+           "Hyeon.c-math-viewer"]
+
+[shell]
+brews = ["shfmt", 
+         "shellcheck"]
+vscodes = ["foxundermoon.shell-format", 
+           "timonwong.shellcheck", 
+           "bmalehorn.vscode-fish"]
+
+[cs_225]
+casks = ["docker"]
+vscodes = ["ms-vscode-remote.remote-containers", 
+           "ms-vscode-remote.remote-ssh", 
+           "ms-vscode-remote.remote-ssh-edit", 
+           "ms-vscode.remote-explorer"]
+
+[cs_233]
+taps = ["chipsalliance/verible",
+        "randomplum/gtkwave"]
+brews = ["icarus-verilog"]
+casks = ["verible", 
+         "gtkwave"]
+vscodes = ["AngaBlue.asm-formatter", 
+           "kdarkhan.mips", 
+           "teros-technology.teroshdl"]
+
+[python]           
+brews = ["pyenv", "xz"]
+vscodes = ["ms-python.black-formatter", 
+           "ms-python.python", 
+           "ms-python.vscode-pylance", 
+           "njpwerner.autodocstring"]
+
+[utils]
+brews = ["cheat", 
+         "tree", 
+         "tldr", 
+         "trash", 
+         "ugrep", 
+         "bat", 
+         "bat-extras", 
+         "eza",
+         "d2"]
+vscodes = ["terrastruct.d2"]               
+
+
+
+
 
 
 
