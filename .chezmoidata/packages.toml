@@ -1,4 +1,4 @@
-[packages]
+[core]
 taps = ['homebrew/bundle',
         'homebrew/services', 
         'homebrew/cask-fonts']
