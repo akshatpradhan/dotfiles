@@ -1,0 +1,25 @@
+#!/usr/bin/env fish
+eval (/opt/homebrew/bin/brew shellenv)
+echo '
+{{- $types := list "core" "ide" -}}
+{{- range $type := $types }}
+  {{- $taps := index $. $type "taps" -}}
+  {{- $brews := index $. $type "brews" -}}
+  {{- $casks := index $. $type "casks" -}}
+  {{- $vscodes := index $. $type "vscodes" -}}
+
+  {{- range $taps }}
+  tap {{ . | quote }}
+  {{- end }}
+  {{- range $brews }}
+  brew {{ . | quote }}
+  {{- end }}
+  {{- range $casks }}
+  cask {{ . | quote }}
+  {{- end }}
+  {{- range $vscodes }}
+  vscode {{ . | quote }}
+  {{- end }}
+{{- end }}
+
+' | brew bundle --no-lock --file=/dev/stdin
