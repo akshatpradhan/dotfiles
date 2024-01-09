@@ -7,6 +7,7 @@ brews = ['mas',
          'fish',
          'fisher']
 casks = ['1password']
+vscodes = []
 
 [ide]
 casks = ["visual-studio-code"]
