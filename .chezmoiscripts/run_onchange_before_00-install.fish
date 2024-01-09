@@ -3,7 +3,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # brew bundle --no-lock --file=~/Brewfile
 set packages core ide cpp
 
-for package in $packages do
+for package in $packages
     echo "{{ range .$package.taps -}}
     tap {{ . | quote }}
     {{ end -}}
