@@ -5,4 +5,4 @@ brew {{ . | quote }}
 {{ end -}}
 {{ range .packages.casks -}}
 cask {{ . | quote }}
-{{ end -}}' | brew bundle --no-lock --file=/dev/stdin
+{{ end -}}'| brew bundle --no-lock --file=/dev/stdin
