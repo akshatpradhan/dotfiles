@@ -1,0 +1,14 @@
+skip -gfi /usr/include/c++/8/*
+skip -gfi /usr/include/c++/8/*/*
+skip -gfi /usr/include/c++/8/*/*/*
+skip -gfi /software/gcc-12.3.0/include/c++/12.3.0/*
+skip -gfi /software/gcc-12.3.0/include/c++/12.3.0/*/*
+skip -gfi /software/gcc-12.3.0/include/c++/12.3.0/*/*/*
+skip -gfi /usr/*/*
+skip -gfi /software/*/*
+python
+import sys
+sys.path.insert(0, '/software/gcc-12.3.0/share/gcc-12.3.0/python')
+from libstdcxx.v6.printers import register_libstdcxx_printers
+register_libstdcxx_printers (None)
+end
