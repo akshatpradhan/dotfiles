@@ -8,15 +8,15 @@ brews = ['mas',
          'fisher']
 casks = ['1password']
 
-# [ide]
-# casks = ["visual-studio-code"]
-# vscodes = ["PenumbraTheme.penumbra", 
-#            "GitHub.copilot", 
-#            "GitHub.copilot-chat", 
-#            "Willumz.generic-pseudocode", 
-#            "hediet.debug-visualizer", 
-#            "ms-vscode.hexeditor", 
-#            "EdwinHuiSH.better-comments-next"]
+[ide]
+casks = ["visual-studio-code"]
+vscodes = ["PenumbraTheme.penumbra", 
+           "GitHub.copilot", 
+           "GitHub.copilot-chat", 
+           "Willumz.generic-pseudocode", 
+           "hediet.debug-visualizer", 
+           "ms-vscode.hexeditor", 
+           "EdwinHuiSH.better-comments-next"]
 
 # [cpp]
 # brews = ["gcc", 
