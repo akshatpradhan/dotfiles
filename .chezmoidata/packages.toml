@@ -35,8 +35,8 @@ vscodes = ["ms-vscode.cpptools",
 
 [shell]
 taps = []
-brews = ["shfmt", 
-         "shellcheck"]
+brews = ["shfmt", # Autoformat shell script source code
+         "shellcheck"] # Static analysis tool for shell scripts
 casks = []         
 vscodes = ["foxundermoon.shell-format", 
            "timonwong.shellcheck", 
@@ -54,12 +54,12 @@ vscodes = ["ms-vscode-remote.remote-containers",
 [cs_233]
 taps = ["chipsalliance/verible",
         "randomplum/gtkwave"]
-brews = ["icarus-verilog"]
-casks = ["verible", 
-         "gtkwave"]
+brews = ["icarus-verilog",
+         "verible"]
+casks = ["gtkwave"]
 vscodes = ["AngaBlue.asm-formatter", 
            "kdarkhan.mips", 
-           "teros-technology.teroshdl"]
+           "teros-technology.teroshdl"] # Verilog Formatter and Syntax Highlight
 
 [ruby]
 taps = []
@@ -78,32 +78,31 @@ vscodes = ["ms-python.black-formatter",
            "ms-python.python", 
            "ms-python.vscode-pylance", 
            "njpwerner.autodocstring"]
-
+           # yt-dlp # youtube-dl fork with more features and less bugs
 
 [manim]
 taps = []
-brews = []
-
-# brews =  ["ffmpeg", 
-#           "pango", 
-#           "pkg-config", 
-#           "py3cairo", # pip install pycairo
-#           "scipy",] # pip install scipy
+brews =  ["ffmpeg", 
+          "pango", 
+          "pkg-config"]
+casks = ["mactex-no-gui"]
+vscodes = ["Rickaym.manim-sideview"]
 # pip install manim?
-casks = []
-vscodes = [] # ["Rickaym.manim-sideview"]
+# pip install yt-dlp
+# pip install pycairo
+# pip install scipy
 
 [utils]
 taps = []
 brews = ["cheat", 
          "tree", 
          "tldr", 
-         "trash", 
+         "trash", #CLI tool that moves files or folder to the trash
          "ugrep", 
          "bat", 
          "bat-extras", 
          "eza",
-         "d2"]
+         "d2"] # Diagramming tool
 casks = []         
 vscodes = ["terrastruct.d2"]
 
@@ -126,7 +125,9 @@ casks = ["rectangle", # Window manager
          "motrix", # Torrent client
          "cyberduck", # File transfer client
          "skype", # Video conferencing
-         "anylist"]# Grocery list
+         "anylist", # Grocery list
+         "heynote", # Scratchpad for developers 
+         "only-switch"] # Hidden Menu Bar
 vscodes = []         
 
 

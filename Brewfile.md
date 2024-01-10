@@ -1,122 +1,24 @@
+# See packages.toml
 
+App Store apps
 
-
-# Programming Language Tools
-cask "visual-studio-code"
-vscode "PenumbraTheme.penumbra"
-vscode "GitHub.copilot"
-vscode "GitHub.copilot-chat"
-vscode "Willumz.generic-pseudocode"
-vscode "hediet.debug-visualizer"
-vscode "ms-vscode.hexeditor"
-vscode "EdwinHuiSH.better-comments-next"
-
-# C++ Development
-brew "gcc"
-brew "clang-format"
-brew "catch2"
-vscode "ms-vscode.cpptools"
-vscode "cschlosser.doxdocgen"
-vscode "jeff-hykin.better-cpp-syntax"
-vscode "Hyeon.c-math-viewer"
-
-# Shell
-brew "shfmt" # Autoformat shell script source code
-brew "shellcheck" # Static analysis tool for shell scripts
-vscode "foxundermoon.shell-format"
-vscode "timonwong.shellcheck"
-vscode "bmalehorn.vscode-fish"
-
-# CS 225
-cask "docker"
-vscode "ms-vscode-remote.remote-containers"
-vscode "ms-vscode-remote.remote-ssh"
-vscode "ms-vscode-remote.remote-ssh-edit"
-vscode "ms-vscode.remote-explorer"
-
-# CS 233
-tap chipsalliance/verible
-cask "verible"
-tap randomplum/gtkwave
-cask "gtkwave"
-brew "icarus-verilog"
-vscode "AngaBlue.asm-formatter"
-vscode "kdarkhan.mips"
-vscode "teros-technology.teroshdl" # Verilog Formatter and Syntax Highlight
-
-
-
-# Python
-brew "pyenv"
-brew "xz"
-vscode "ms-python.black-formatter"
-vscode "ms-python.python"
-vscode "ms-python.vscode-pylance"
-vscode "njpwerner.autodocstring"
-
-# Manim 
-# vscode "Rickaym.manim-sideview"
-# brew "ffmpeg"
-# brew "pango" 
-# brew "pkg-config"
-# brew "qt5"
-# brew "py3cairo" # pip install pycairo
-# brew "scipy" # pip install scipy
-# cask "mactex-no-gui"
-
-
-# Download manager
-# yt-dlp # youtube-dl fork with more features and less bugs
-
-# Ruby
-# brew "rbenv"
-# brew "ruby-build"
-# brew "libyaml"
-
-
-# Utilities
-brew "cheat"
-brew "tree"
-brew "tldr"
-brew "trash" #CLI tool that moves files or folder to the trash
-brew "ugrep"
-brew "bat"
-brew "bat-extras"
-brew "eza"
-brew "d2" # Diagramming tool
-vscode "terrastruct.d2"
-
-
-# Applications not in Mac App Store
-#cask "google-chrome"
-
-##### Productivity
-# cask "rectangle" # Window manager
-# cask "breaktimer" # Pomodoro timer
-# cask "alt-tab" # Better alt-tab
-# cask "shottr" # Screenshot tool
-# cask "obsidian" # Note taking
-# cask "mullvad-browser" # Private Browser
-# cask "mimestream" # Email client
-# cask "discord" # Chat
-# cask "arc" # Better Chrome
-# cask "maccy" # Clipboard manager
-# cask "iina" # Better VLC
-# cask "adobe-acrobat-pro"
-# cask "zoom" # Video conferencing
-# cask "motrix" # Torrent client
-# cask "cyberduck" # File transfer client
-# cask "skype"  # Video conferencing
-# cask "anylist" # Grocery list
-
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft OneNote", id: 784801555 # Maybe
+mas "Microsoft PowerPoint", id: 462062816
+mas "Microsoft Word", id: 462054704
+mas "NextDNS", id: 1464122853
+mas "Pixelmator Pro", id: 1289583905
+mas "QSpace", id: 1469774098
+mas "Scrivener 3", id: 1310686187
+# Install UseMotion
+# Install Eagle, then restore from backup, located in Photos directory
 
 
 
 # Maybe ReadWise to save highlights from books, articles, etc
 # But only if PopClip seems useful. So far, the only thing that seems useful is the copy as Markdown
 # The ChatGPT extensions for PopClip doesn't seem all that great.
-# Install UseMotion
-# Install Eagle, then restore from backup, located in Photos directory
+
 
 
 # AI Tools
@@ -130,6 +32,6 @@ vscode "terrastruct.d2"
 # Soulver has multiple sheets, so has lots of organization
 # Numi is newest and has the newest UI
 
-#### Applications not needed for our testing purposes yet
+
 
 # cask "kap" # Screen recording but screenity chrome extension might be better
