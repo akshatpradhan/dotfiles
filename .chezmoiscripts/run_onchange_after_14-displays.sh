@@ -5,6 +5,7 @@
 # - [x] Turn on until sunrise (defualt: off))
 # - [More Warm] Color Temperature (defualt: medium warm)
 
+# Not Working
 CORE_BRIGHTNESS="/var/root/Library/Preferences/com.apple.CoreBrightness.plist"
 
 ENABLE='{

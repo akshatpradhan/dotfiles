@@ -9,7 +9,8 @@
 # [ ] Websites (default: on)
 
 # Not Working
-defaults write com.apple.Spotlight orderedItems -array \
+defaults write com.apple.Spotlight orderedItems -array
+defaults write com.apple.Spotlight orderedItems -array-add \
   '{"enabled"=1;"name"="APPLICATIONS";}' \
   '{"enabled"=1;"name"="MENU_EXPRESSION";}' \
   '{"enabled"=0;"name"="CONTACT";}' \
