@@ -9,12 +9,12 @@ zsh -c "$(curl https://raw.githubusercontent.com/akshatpradhan/dotfiles/system_d
 ### To Install Packages
 
 ```shell
-eval (/opt/homebrew/bin/brew shellenv) 
-chezmoi init akshatpradhan
-chezmoi cd
-git switch system_defaults
-chezmoi -v apply
-chezmoi -v update
+eval (/opt/homebrew/bin/brew shellenv);
+chezmoi init akshatpradhan;
+chezmoi cd;
+git switch system_defaults;
+chezmoi -v apply;
+chezmoi -v update;
 ```
 ### To reset packages to just the core
 
