@@ -24,7 +24,7 @@ vscodes = ["PenumbraTheme.penumbra",
 [utils]
 taps = []
 brews = ["cheat", # better man page
-         "tre",  # better tree
+         "tre-command",  # better tree
          "trash", #CLI tool that moves files or folder to the trash
          "ugrep", 
          "bat", # better cat
