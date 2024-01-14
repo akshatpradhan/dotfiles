@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 # Control Center Modules
 # - [Dont] Wi-fi (default: show)
 defaults write com.apple.controlcenter "NSStatusItem Visible WiFi" -bool false # Working

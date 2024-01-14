@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 
 # Night Shift
 # - [Sunset to Sunrise] Schedule (default: off)

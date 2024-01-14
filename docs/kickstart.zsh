@@ -16,7 +16,7 @@ elevate_root_access() {
 
 install_homebrew() {
   print "Installing Homebrew..."
-  NONINTERACTIVE=1 /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 }
 
 install_rosetta() {

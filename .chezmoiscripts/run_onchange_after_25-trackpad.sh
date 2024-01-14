@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 # Point & Click
 # - [fast] Tracking speed
 defaults write -g com.apple.trackpad.scaling -float 3.0 # Working

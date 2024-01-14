@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 
 # [ ] Slightly dim the display on batter (default: on)
 sudo pmset -b lessbright 0 # Working

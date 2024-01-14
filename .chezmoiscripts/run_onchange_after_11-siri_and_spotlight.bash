@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 # Siri & Spotlight
 # Search Results
 # [ ] Contacts (default: on)

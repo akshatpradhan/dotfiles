@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 
 # - [Fast] Key repeat Rate
 defaults write -g KeyRepeat -int 2 # Working

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 # Display
 # [x] Show toolbar button shapes (default: off)
 sudo defaults write com.apple.universalaccess showToolbarButtonShapes -bool true # Not working

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 
 # [30 mins] Turn display off on battery when inactive (default: 2 mins)
 sudo pmset -b displaysleep 30 # Working
