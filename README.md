@@ -10,7 +10,11 @@ zsh -c "$(curl https://raw.githubusercontent.com/akshatpradhan/dotfiles/system_d
 
 ```shell
 eval (/opt/homebrew/bin/brew shellenv) 
-chezmoi init --apply akshatpradhan --branch system_defaults
+chezmoi init akshatpradhan
+chezmoi cd
+git switch system_defaults
+chezmoi -v apply
+chezmoi -v update
 ```
 ### To reset packages to just the core
 
