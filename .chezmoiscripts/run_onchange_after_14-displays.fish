@@ -6,9 +6,9 @@
 # - [More Warm] Color Temperature (defualt: medium warm)
 
 # Not Working
-CORE_BRIGHTNESS="/var/root/Library/Preferences/com.apple.CoreBrightness.plist"
+set CORE_BRIGHTNESS="/var/root/Library/Preferences/com.apple.CoreBrightness.plist"
 
-ENABLE='{
+set ENABLE='{
   CBBlueReductionStatus =     {
     AutoBlueReductionEnabled = 1;
     BlueLightReductionDisableScheduleAlertCounter = 3;
