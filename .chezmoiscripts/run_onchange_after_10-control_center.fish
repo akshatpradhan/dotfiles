@@ -21,7 +21,7 @@ defaults -currentHost write com.apple.controlcenter Hearing -int 1 # Working
 # Menu Bar Only
 # Clock Options
 # - [x] Announce the time (default: off)
-# //! Doesn't Work
+#! Doesn't Work
 defaults write com.apple.speech.synthesis.general.prefs "TimeAnnouncementPrefs" -dict-add "TimeAnnouncementsEnabled" -bool true
 launchctl kickstart gui/$UID/com.apple.speech.synthesisserver
 
