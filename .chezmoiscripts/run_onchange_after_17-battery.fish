@@ -1,11 +1,10 @@
 #!/usr/bin/env fish
 
-# [ ] Slightly dim the display on batter (default: on)
-sudo pmset -b lessbright 0 # Working
-sudo pmset -c lessbright 0 # Working
+# [ ] Slightly dim the display on battery (default: on)
+sudo pmset -a lessbright 0 # Working
 
 # [x] Prevent automatic sleeping on power adapter when the display is off (default: off)
-sudo pmset -c sleep 1 # Not Working
+sudo pmset -a sleep 0 # Not Working
 
 # [Never] Wake for network access
-sudo pmset -a womp 0 2>/dev/null # Working
+sudo pmset -a womp 0 # Working
