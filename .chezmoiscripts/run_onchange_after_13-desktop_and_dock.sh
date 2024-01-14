@@ -40,7 +40,7 @@ defaults write com.apple.dock "mru-spaces" -bool "false" # Working
 defaults write com.apple.dock persistent-apps -array # Working
 
 # [Start Screen Saver] Top Left Corner (default: off)
-defaults write com.apple.dock wvous-tl-corner -int 5
+defaults write com.apple.dock wvous-tl-corner -int 5 # Working
 
 # dock icons of hidden (⌘ + H) applications are translucent (default: off)
 defaults write com.apple.dock showhidden -bool true
