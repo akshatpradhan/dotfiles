@@ -34,11 +34,11 @@ defaults write com.apple.Spotlight orderedItems -array-add \
   '{"enabled"=1;"name"="BOOKMARKS";}'
 
 
-/usr/libexec/PlistBuddy -c "Delete ':orderedItems:8:enabled'" -c "Add ':orderedItems:8:enabled' bool 'false'" "$HOME/Library/Preferences/com.apple.Spotlight.plist"
-/usr/libexec/PlistBuddy -c "Delete ':orderedItems:11:enabled'" -c "Add ':orderedItems:11:enabled' bool 'false'" "$HOME/Library/Preferences/com.apple.Spotlight.plist"
-/usr/libexec/PlistBuddy -c "Delete ':orderedItems:12:enabled'" -c "Add ':orderedItems:12:enabled' bool 'false'" "$HOME/Library/Preferences/com.apple.Spotlight.plist"
-/usr/libexec/PlistBuddy -c "Delete ':orderedItems:19:enabled'" -c "Add ':orderedItems:19:enabled' bool 'false'" "$HOME/Library/Preferences/com.apple.Spotlight.plist"
-/usr/libexec/PlistBuddy -c "Delete ':orderedItems:20:enabled'" -c "Add ':orderedItems:20:enabled' bool 'false'" "$HOME/Library/Preferences/com.apple.Spotlight.plist"
+/usr/libexec/PlistBuddy -c "Set ':orderedItems:8:enabled' bool 'false'" "$HOME/Library/Preferences/com.apple.Spotlight.plist"
+/usr/libexec/PlistBuddy -c "Set ':orderedItems:11:enabled' bool 'false'" "$HOME/Library/Preferences/com.apple.Spotlight.plist"
+/usr/libexec/PlistBuddy -c "Set ':orderedItems:12:enabled' bool 'false'" "$HOME/Library/Preferences/com.apple.Spotlight.plist"
+/usr/libexec/PlistBuddy -c "Set ':orderedItems:19:enabled' bool 'false'" "$HOME/Library/Preferences/com.apple.Spotlight.plist"
+/usr/libexec/PlistBuddy -c "Set ':orderedItems:20:enabled' bool 'false'" "$HOME/Library/Preferences/com.apple.Spotlight.plist"
  
 # Load new settings before rebuilding the index
 killall mds >/dev/null 2>&1

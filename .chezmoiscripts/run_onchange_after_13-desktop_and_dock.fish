@@ -21,17 +21,17 @@ defaults write com.apple.dock orientation -string "left" # Working
 # [x] Show items on Desktop (default: on) and in Stage Manager (default: off)
 
 # [x] Stage Manager (default: off)
-# //! Doesn't Work
+#! Doesn't Work
 defaults write com.apple.WindowManager GloballyEnabled -bool true
-/usr/libexec/PlistBuddy -c "Delete ':GloballyEnabled'" -c "Add ':GloballyEnabled' bool 'true'" "$HOME/Library/Preferences/com.apple.WindowManager.plist"
-/usr/libexec/PlistBuddy -c "Delete ':GloballyEnabledEver'" -c "Add ':GloballyEnabledEver' bool 'true'" "$HOME/Library/Preferences/com.apple.WindowManager.plist"
+/usr/libexec/PlistBuddy -c "Set ':GloballyEnabled' bool 'true'" "$HOME/Library/Preferences/com.apple.WindowManager.plist"
+/usr/libexec/PlistBuddy -c "Set ':GloballyEnabledEver' bool 'true'" "$HOME/Library/Preferences/com.apple.WindowManager.plist"
 
 # [x] Show recent apps in stage manager (default: off)
-/usr/libexec/PlistBuddy -c "Delete ':HideDesktop'" -c "Add ':HideDesktop' bool 'false'" "$HOME/Library/Preferences/com.apple.WindowManager.plist"
-/usr/libexec/PlistBuddy -c "Delete ':AutoHide'" -c "Add ':AutoHide' bool 'false'" "$HOME/Library/Preferences/com.apple.WindowManager.plist"
+/usr/libexec/PlistBuddy -c "Set ':HideDesktop' bool 'false'" "$HOME/Library/Preferences/com.apple.WindowManager.plist"
+/usr/libexec/PlistBuddy -c "Set ':AutoHide' bool 'false'" "$HOME/Library/Preferences/com.apple.WindowManager.plist"
 
 # [One at a Time] Show windows from an application (default: all at once)
-/usr/libexec/PlistBuddy -c "Delete ':AppWindowGroupingBehavior'" -c "Add ':AppWindowGroupingBehavior' integer '0'" "$HOME/Library/Preferences/com.apple.WindowManager.plist"
+/usr/libexec/PlistBuddy -c "Add ':AppWindowGroupingBehavior' integer '0'" "$HOME/Library/Preferences/com.apple.WindowManager.plist"
 
 # Windows
 # - [always] Prefer tabs when opening documents (default: In Full Screen)
