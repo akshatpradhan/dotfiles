@@ -20,17 +20,16 @@ defaults -currentHost write com.apple.controlcenter Hearing -int 1 # Working
 
 # Menu Bar Only
 # Clock Options
-# - [x] Announce the time (default: off)
-#! Doesn't Work
+# [x] Announce the time (default: off)
+# ! Doesn't Work
 defaults write com.apple.speech.synthesis.general.prefs "TimeAnnouncementPrefs" -dict-add "TimeAnnouncementsEnabled" -bool true
 launchctl kickstart gui/$UID/com.apple.speech.synthesisserver
 
-# - [Dont] Spotlight (default: Show)
+# [Dont] Spotlight (default: Show)
+defaults -currentHost write com.apple.Spotlight MenuItemHidden -bool true # * Working
 
-defaults -currentHost write com.apple.Spotlight MenuItemHidden -bool true # Working
+# [Show] Time Machine (default: Dont)
+defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.TimeMachine" -bool true # * Working
+defaults write com.apple.systemuiserver menuExtras -array-add "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" # * Working
 
-# - [Show] Time Machine (default: Dont)
-defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.TimeMachine" -bool true # Working
-defaults write com.apple.systemuiserver menuExtras -array-add "/System/Library/CoreServices/Menu Extras/TimeMachine.menu"
-
-# - [Dont] VPN
+# [Dont] VPN

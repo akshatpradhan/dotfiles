@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadDescription</key>
+			<string>Terminal Access</string>
+			<key>PayloadDisplayName</key>
+			<string>Terminal Access</string>
+			<key>PayloadIdentifier</key>
+			<string>5FB6C367-1FE6-4632-9D60-DFA690EECB9B</string>
+			<key>PayloadOrganization</key>
+			<string>CyberChaos</string>
+			<key>PayloadType</key>
+			<string>com.apple.TCC.configuration-profile-policy</string>
+			<key>PayloadUUID</key>
+			<string>3E16DCE9-C4AF-4D33-8EAB-BA5B6FDF0DC2</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>Services</key>
+			<dict>
+				<key>SystemPolicyAllFiles</key>
+				<array>
+					<dict>
+						<key>Allowed</key>
+						<true/>
+						<key>CodeRequirement</key>
+						<string>identifier "com.apple.Terminal" and anchor apple</string>
+						<key>Comment</key>
+						<string></string>
+						<key>Identifier</key>
+						<string>com.apple.Terminal</string>
+						<key>IdentifierType</key>
+						<string>bundleID</string>
+					</dict>
+				</array>
+			</dict>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Terminal Access</string>
+	<key>PayloadDisplayName</key>
+	<string>Terminal Access</string>
+	<key>PayloadIdentifier</key>
+	<string>5FB6C367-1FE6-4632-9D60-DFA690EECB9B</string>
+	<key>PayloadOrganization</key>
+	<string>CyberChaos</string>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>94EAE37C-3D13-488D-ABC4-35E5888D5C87</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

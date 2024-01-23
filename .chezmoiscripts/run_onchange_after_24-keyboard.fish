@@ -1,11 +1,12 @@
 #!/usr/bin/env fish
 
 # - [Fast] Key repeat Rate
-defaults write -g KeyRepeat -int 2 # Working
+defaults write -g KeyRepeat -int 2 # * Working
 
 # - [Short] Delay until repeat
-defaults write -g InitialKeyRepeat -int 15 # Working
+defaults write -g InitialKeyRepeat -int 15 # * Working
 
+# ! Not Working
 # Keyboard Shortcuts
 # - [Modifier Keys] Switch Control and Capslock"
 
