@@ -2,13 +2,12 @@
 [English] Language
 [United States] Select your Country or Region
 # Vision
-[2nd largest] Pointer Size
+[2nd smallest] Pointer Size
 [auto] Appearacnce
-->Connect to internet
+# Select Your Wi-Fi Network
+[x] TheInternet
 [Not now] Migration Assistant
 ->Sign In with Your Apple ID
-->Create a Computer Account
--> MacBookAirChiefExec for Hostname
 [x] Enable Location Services on this Mac
 [ ] Share Mac Analytics with Apple
 [Voice 1] Select a Siri Voice
@@ -18,8 +17,4 @@
 # Click System Settings -> Privacy & Security -> Full Disk Access -> Add Terminal.app
 
 
-Sign in to iCloud and App Store
-
-Install all macOS updates.
-
-Launch App Store and sign in, otherwise installing apps via mas won’t work.
+Sign in to iCloud and App Store, otherwise installing apps via mas won’t work.

@@ -21,21 +21,9 @@ defaults write com.apple.dock orientation -string "left" # Working
 # ! Doesn't Work
 # [x] Show items on Desktop (default: on) and in Stage Manager (default: off)
 
-# ! Doesn't Work
-# [x] Show recent apps in Stage Manager (default: off)
-defaults write com.apple.WindowManager GloballyEnabled -bool true
-/usr/libexec/PlistBuddy -c "Set ':GloballyEnabled' bool 'true'" "$HOME/Library/Preferences/com.apple.WindowManager.plist"
-/usr/libexec/PlistBuddy -c "Set ':GloballyEnabledEver' bool 'true'" "$HOME/Library/Preferences/com.apple.WindowManager.plist"
-
-# ! Seems like a duplicate of above
-# [x] Show recent apps in stage manager (default: off)
-defaults write com.apple.WindowManager HideDesktop -bool false
-defaults write com.apple.WindowManager AutoHide -bool false
-#/usr/libexec/PlistBuddy -c "Set ':HideDesktop' bool 'false'" "$HOME/Library/Preferences/com.apple.WindowManager.plist"
-#/usr/libexec/PlistBuddy -c "Set ':AutoHide' bool 'false'" "$HOME/Library/Preferences/com.apple.WindowManager.plist"
 
 # [One at a Time] Show windows from an application (default: all at once)
-/usr/libexec/PlistBuddy -c "Add ':AppWindowGroupingBehavior' integer '0'" "$HOME/Library/Preferences/com.apple.WindowManager.plist"
+defaults write com.apple.WindowManager AppWindowGroupingBehavior -int 0
 
 # Windows
 # - [always] Prefer tabs when opening documents (default: In Full Screen)
@@ -48,6 +36,10 @@ defaults write com.apple.dock "mru-spaces" -bool "false" # * Working
 # Delete everything from the dock
 defaults write com.apple.dock persistent-apps -array # * Working
 
+# TODO: After comparing what defaults read com.apple.dock prints before and after manually removing the icons from the Dock I noticed that I just have to delete the recent-apps (for the duplicated icons) and persistent-others (for the folder) keys as well:
+defaults delete com.apple.dock recent-apps
+defaults delete com.apple.dock persistent-others
+
 # [Start Screen Saver] Top Left Corner (default: off)
 defaults write com.apple.dock wvous-tl-corner -int 5 # * Working
 
@@ -55,3 +47,5 @@ defaults write com.apple.dock wvous-tl-corner -int 5 # * Working
 defaults write com.apple.dock showhidden -bool true
 
 # Investigate the use of stacks in the dock (for example, RECENT, CS225, and CS233 could come there. Is it useful?)
+
+

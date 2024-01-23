@@ -8,7 +8,7 @@
 # [ ] Tips (default: on)
 # [ ] Websites (default: on)
 
-#! Doesn't Work
+# ! Doesn't Work
 defaults write com.apple.Spotlight orderedItems -array
 defaults write com.apple.Spotlight orderedItems -array-add \
   '{"enabled"=1;"name"="APPLICATIONS";}' \

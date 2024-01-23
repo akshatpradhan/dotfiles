@@ -24,10 +24,11 @@ install_rosetta() {
   sudo /usr/sbin/softwareupdate --install-rosetta --agree-to-license
 }
 
-install_system_updates() {
-  print "Installing System Updates..."
-  sudo /usr/sbin/softwareupdate --all --install --force
-}
+# TODO: Move to an upgrade.sh script
+# install_system_updates() {
+#   print "Installing System Updates..."
+#   sudo /usr/sbin/softwareupdate --all --install --force
+# }
 
 install_mas() {
   print "Installing Mac App Store CLI..."
@@ -53,7 +54,7 @@ install_fish() {
 elevate_root_access
 install_homebrew
 install_rosetta
-install_system_updates
+# install_system_updates
 install_mas
 install_chezmoi
 install_fish
