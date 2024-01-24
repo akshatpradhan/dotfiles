@@ -4,7 +4,7 @@
 sudo pmset -a lessbright 0 # * Working
 
 # [x] Prevent automatic sleeping on power adapter when the display is off (default: off)
-# ! Not Working
+# ! To Test
 sudo pmset -c sleep 0
 
 # [Never] Wake for network access
