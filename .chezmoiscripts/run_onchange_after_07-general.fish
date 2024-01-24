@@ -25,11 +25,6 @@ defaults write -g AppleICUDateFormatStrings -dict 1 "y-MM-dd" # * Working
 
 # ### Sharing
 # [] MacBookAirChiefExec
-# sudo systemsetup -setcomputername MacBookAirChiefExec # * Working
-# sudo systemsetup -setlocalsubnetname MacBookAirChiefExec # * Working
-# sudo networksetup -setcomputername MacBookAirChiefExec # * Working
-
-
-# sudo scutil --set ComputerName MacBookAirChiefExec
-# sudo scutil --set LocalHostName MacBookAirChiefExec
-# sudo scutil --set HostName MacBookAirChiefExec
+sudo systemsetup -setcomputername MacBookAirChiefExec # * Working
+sudo systemsetup -setlocalsubnetname MacBookAirChiefExec # * Working
+sudo networksetup -setcomputername MacBookAirChiefExec # * Working

@@ -6,9 +6,8 @@ defaults write -g KeyRepeat -int 2 # * Working
 # [Short] Delay until repeat
 defaults write -g InitialKeyRepeat -int 15 # * Working
 
-# ! Not Working Configure Manually
 # Keyboard Shortcuts
-# [Modifier Keys] Switch Control and Capslock"
+# [Modifier Keys] Switch Control and Capslock" # * Working
 defaults -currentHost write -g com.apple.keyboard.modifiermapping.0-0-0 -array-add '
 <dict>
   <key>HIDKeyboardModifierMappingDst</key>
