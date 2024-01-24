@@ -1,19 +1,37 @@
 #!/usr/bin/env fish
 # Siri & Spotlight
 # Search Results
-# ! TEST
 # [ ] Contacts (default: on)
-/usr/libexec/PlistBuddy -c "Set :orderedItems:2:enabled false" ~/Library/Preferences/com.apple.Spotlight.plist
 # [ ] Fonts (default: on)
-/usr/libexec/PlistBuddy -c "Set :orderedItems:8:enabled false" ~/Library/Preferences/com.apple.Spotlight.plist
 # [ ] Movies (default: on)
-/usr/libexec/PlistBuddy -c "Set :orderedItems:11:enabled false" ~/Library/Preferences/com.apple.Spotlight.plist
 # [ ] Music (default: on)
-/usr/libexec/PlistBuddy -c "Set :orderedItems:12:enabled false" ~/Library/Preferences/com.apple.Spotlight.plist
 # [ ] Tips (default: on)
-/usr/libexec/PlistBuddy -c "Set :orderedItems:19:enabled false" ~/Library/Preferences/com.apple.Spotlight.plist
 # [ ] Websites (default: on)
-/usr/libexec/PlistBuddy -c "Set :orderedItems:20:enabled false" ~/Library/Preferences/com.apple.Spotlight.plist
+# ! TEST
+set plist "$HOME/Library/Preferences/com.apple.Spotlight.plist"
+set items 'APPLICATIONS' true 'MENU_EXPRESSION' true 'CONTACT' false 'MENU_CONVERSION' true 'MENU_DEFINITION' true 'DOCUMENTS' true 'EVENT_TODO' true 'DIRECTORIES' true 'FONTS' false 'IMAGES' true 'MESSAGES' true 'MOVIES' false 'MUSIC' false 'MENU_OTHER' true 'PDF' true 'PRESENTATIONS' true 'MENU_SPOTLIGHT_SUGGESTIONS' true 'SPREADSHEETS' true 'SYSTEM_PREFS' true 'TIPS' false 'BOOKMARKS' true
+
+/usr/libexec/PlistBuddy -c "Add :orderedItems array" $plist
+
+for i in (seq 1 2 (count $items))
+    set name $items[$i]
+    set enabled $items[(math $i + 1)]
+    set index (math "(($i - 1) / 2)")
+
+    /usr/libexec/PlistBuddy -c "Add :orderedItems:$index dict" $plist
+    /usr/libexec/PlistBuddy -c "Add :orderedItems:$index:enabled bool $enabled" $plist
+    /usr/libexec/PlistBuddy -c "Add :orderedItems:$index:name string $name" $plist
+end
+
+# Load new settings before rebuilding the index
+# killall mds &> /dev/null || true
+
+# Make sure indexing is enabled for the main volume
+# sudo mdutil -i on / > /dev/null
+
+# Rebuild the index from scratch
+# sudo mdutil -E / > /dev/null
+
 
 
 
@@ -51,11 +69,4 @@
 # /usr/libexec/PlistBuddy -c "Set ':orderedItems:19:enabled' bool 'false'" "$HOME/Library/Preferences/com.apple.Spotlight.plist"
 # /usr/libexec/PlistBuddy -c "Set ':orderedItems:20:enabled' bool 'false'" "$HOME/Library/Preferences/com.apple.Spotlight.plist"
  
-# Load new settings before rebuilding the index
-# killall mds &> /dev/null || true
 
-# Make sure indexing is enabled for the main volume
-# sudo mdutil -i on / > /dev/null
-
-# Rebuild the index from scratch
-# sudo mdutil -E / > /dev/null
