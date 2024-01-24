@@ -1,5 +1,5 @@
 ###############
-# ###[cpp]
+# [cpp]
 # taps = []
 # brews = ["gcc", 
 #          "clang-format", 

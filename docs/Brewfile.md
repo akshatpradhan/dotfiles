@@ -25,6 +25,7 @@ mas "Scrivener 3", id: 1310686187
 # Bolt AI because it's beautiful
 # Intellibar because it's a menu bar that you can copy and paste into anything
 # Quartzite AI because it manages Prompts
+# MacGPT
 
 ##### Calculator
 # Only Calca might do half-adders

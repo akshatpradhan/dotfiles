@@ -49,8 +49,8 @@ install_fish() {
   echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
   chsh -s /opt/homebrew/bin/fish
   print "Open a new terminal window to use fish as the default shell."
-
 }
+
 elevate_root_access
 install_homebrew
 install_rosetta
@@ -58,3 +58,5 @@ install_rosetta
 install_mas
 install_chezmoi
 install_fish
+print "Remember to give full disk access to Terminal.app"
+open "x-apple.systempreferences:com.apple.preference.security"

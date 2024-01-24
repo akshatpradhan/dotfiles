@@ -1,4 +1,8 @@
 #!/usr/bin/env fish
+
+
+
+
 # Siri & Spotlight
 # Search Results
 # [ ] Contacts (default: on)
@@ -7,7 +11,7 @@
 # [ ] Music (default: on)
 # [ ] Tips (default: on)
 # [ ] Websites (default: on)
-# ! TEST
+# ! STILL NOT WORKING. On first run, the plist isn't modified. On second run, the plist is changed. But when running defaults read, the output shows up correctly, but when looking in system preferences, the checkboxes are still all enabled.
 set plist "$HOME/Library/Preferences/com.apple.Spotlight.plist"
 set items 'APPLICATIONS' true 'MENU_EXPRESSION' true 'CONTACT' false 'MENU_CONVERSION' true 'MENU_DEFINITION' true 'DOCUMENTS' true 'EVENT_TODO' true 'DIRECTORIES' true 'FONTS' false 'IMAGES' true 'MESSAGES' true 'MOVIES' false 'MUSIC' false 'MENU_OTHER' true 'PDF' true 'PRESENTATIONS' true 'MENU_SPOTLIGHT_SUGGESTIONS' true 'SPREADSHEETS' true 'SYSTEM_PREFS' true 'TIPS' false 'BOOKMARKS' true
 
