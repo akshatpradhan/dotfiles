@@ -18,9 +18,8 @@ defaults write com.apple.dock orientation -string "left" # * Working
 # defaults write com.apple.dock show-recents -bool false
 
 # Desktop & Stage Manager
-# ! TO TEST
 # [x] Show items on Desktop (default: on) and in Stage Manager (default: off)
-defaults write com.apple.WindowManager HideDesktop -bool false
+defaults write com.apple.WindowManager HideDesktop -bool false # * Working
 # [One at a Time] Show windows from an application (default: all at once)
 defaults write com.apple.WindowManager AppWindowGroupingBehavior -int 0 # * Working
 
