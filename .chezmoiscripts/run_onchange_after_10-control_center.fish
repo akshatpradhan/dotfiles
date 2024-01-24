@@ -1,31 +1,26 @@
 #!/usr/bin/env fish
 # Control Center Modules
-# - [Dont] Wi-fi (default: show)
-defaults write com.apple.controlcenter "NSStatusItem Visible WiFi" -bool false # Working
-defaults -currentHost write com.apple.controlcenter WiFi -int 8                # Working
+# [Dont] Wi-fi (default: show)
+defaults write com.apple.controlcenter "NSStatusItem Visible WiFi" -bool false # * Working
+defaults -currentHost write com.apple.controlcenter WiFi -int 8                # * Working
+# [Dont] Sound (default: active)
+defaults -currentHost write com.apple.controlcenter Sound -int 8 # * Working
+# [Dont] Now Playing (default: active)
+defaults -currentHost write com.apple.controlcenter NowPlaying -int 8 # * Working
 
-# - [Dont] Sound (default: active)
-defaults -currentHost write com.apple.controlcenter Sound -int 8 # Working
-
-# - [Dont] Now Playing (default: active)
-defaults -currentHost write com.apple.controlcenter NowPlaying -int 8 # Working
 
 # Other Modules
-
-# - [Control Center] Music Recognition
-defaults -currentHost write com.apple.controlcenter MusicRecognition -int 9 # Working
-
-# - [Control Center] Hearing
-defaults -currentHost write com.apple.controlcenter Hearing -int 1 # Working
+# [Control Center] Music Recognition
+defaults -currentHost write com.apple.controlcenter MusicRecognition -int 9 # * Working
+# [Control Center] Hearing
+defaults -currentHost write com.apple.controlcenter Hearing -int 1 # * Working
 
 # Menu Bar Only
 # Clock Options
 # [x] Announce the time (default: off)
-
-# ! TEST
 defaults write com.apple.speech.synthesis.general.prefs "TimeAnnouncementPrefs" -dict-add "TimeAnnouncementsEnabled" -bool true # * Working
 defaults write com.apple.speech.synthesis.general.prefs "TimeAnnouncementPrefs" -dict-add "TimeAnnouncementsPhraseIdentifier" -string "ShortTime" # * Working
-/usr/libexec/PlistBuddy -c "Add :TimeAnnouncementPrefs:TimeAnnouncementsVoiceSettings:CustomVolume real 0.3" ~/Library/Preferences/com.apple.speech.synthesis.general.prefs.plist
+/usr/libexec/PlistBuddy -c "Add :TimeAnnouncementPrefs:TimeAnnouncementsVoiceSettings:CustomVolume real 0.25" ~/Library/Preferences/com.apple.speech.synthesis.general.prefs.plist # * Working
 
 # [Dont] Spotlight (default: Show)
 defaults -currentHost write com.apple.Spotlight MenuItemHidden -bool true # * Working
