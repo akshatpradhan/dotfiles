@@ -21,9 +21,11 @@ defaults -currentHost write com.apple.controlcenter Hearing -int 1 # Working
 # Menu Bar Only
 # Clock Options
 # [x] Announce the time (default: off)
+
 # ! TEST
-defaults write com.apple.speech.synthesis.general.prefs "TimeAnnouncementPrefs" -dict-add "TimeAnnouncementsEnabled" -bool true
-defaults write com.apple.speech.synthesis.general.prefs "TimeAnnouncementPrefs" -dict-add "TimeAnnouncementsPhraseIdentifier" -string "ShortTime"
+defaults write com.apple.speech.synthesis.general.prefs "TimeAnnouncementPrefs" -dict-add "TimeAnnouncementsEnabled" -bool true # * Working
+defaults write com.apple.speech.synthesis.general.prefs "TimeAnnouncementPrefs" -dict-add "TimeAnnouncementsPhraseIdentifier" -string "ShortTime" # * Working
+/usr/libexec/PlistBuddy -c "Add :TimeAnnouncementPrefs:TimeAnnouncementsVoiceSettings:CustomVolume float 0.3" ~/Library/Preferences/com.apple.speech.synthesis.general.prefs.plist
 
 # [Dont] Spotlight (default: Show)
 defaults -currentHost write com.apple.Spotlight MenuItemHidden -bool true # * Working
