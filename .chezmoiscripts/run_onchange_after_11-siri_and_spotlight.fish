@@ -34,17 +34,17 @@ defaults write com.apple.Spotlight orderedItems -array-add \
   '{"enabled"=1;"name"="BOOKMARKS";}'
 
 
-/usr/libexec/PlistBuddy -c "Set ':orderedItems:8:enabled' bool 'false'" "$HOME/Library/Preferences/com.apple.Spotlight.plist"
-/usr/libexec/PlistBuddy -c "Set ':orderedItems:11:enabled' bool 'false'" "$HOME/Library/Preferences/com.apple.Spotlight.plist"
-/usr/libexec/PlistBuddy -c "Set ':orderedItems:12:enabled' bool 'false'" "$HOME/Library/Preferences/com.apple.Spotlight.plist"
-/usr/libexec/PlistBuddy -c "Set ':orderedItems:19:enabled' bool 'false'" "$HOME/Library/Preferences/com.apple.Spotlight.plist"
-/usr/libexec/PlistBuddy -c "Set ':orderedItems:20:enabled' bool 'false'" "$HOME/Library/Preferences/com.apple.Spotlight.plist"
+# /usr/libexec/PlistBuddy -c "Set ':orderedItems:8:enabled' bool 'false'" "$HOME/Library/Preferences/com.apple.Spotlight.plist"
+# /usr/libexec/PlistBuddy -c "Set ':orderedItems:11:enabled' bool 'false'" "$HOME/Library/Preferences/com.apple.Spotlight.plist"
+# /usr/libexec/PlistBuddy -c "Set ':orderedItems:12:enabled' bool 'false'" "$HOME/Library/Preferences/com.apple.Spotlight.plist"
+# /usr/libexec/PlistBuddy -c "Set ':orderedItems:19:enabled' bool 'false'" "$HOME/Library/Preferences/com.apple.Spotlight.plist"
+# /usr/libexec/PlistBuddy -c "Set ':orderedItems:20:enabled' bool 'false'" "$HOME/Library/Preferences/com.apple.Spotlight.plist"
  
-# Load new settings before rebuilding the index
-killall mds >/dev/null 2>&1
+# # Load new settings before rebuilding the index
+# killall mds >/dev/null 2>&1
 
-# Make sure indexing is enabled for the main volume
-sudo mdutil -i on / >/dev/null
+# # Make sure indexing is enabled for the main volume
+# sudo mdutil -i on / >/dev/null
 
-# Rebuild the index from scratch
-sudo mdutil -E / >/dev/null
+# # Rebuild the index from scratch
+# sudo mdutil -E / >/dev/null
