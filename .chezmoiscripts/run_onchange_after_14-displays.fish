@@ -8,8 +8,8 @@
 # ! TO TEST
 
 generatedUID=$(dscl . -read ~ GeneratedUID | sed 's/GeneratedUID: //')
-sudo /usr/libexec/PlistBuddy -c "Set :CBUser-$generatedUID:CBBlueLightReductionCCTTargetRaw 2700" "/var/root/Library/Preferences/com.apple.CoreBrightness.plist"
-sudo /usr/libexec/PlistBuddy -c "Set :CBUser-$generatedUID:CBBlueReductionStatus:BlueLightReductionDisableScheduleAlertCounter 3" "/var/root/Library/Preferences/com.apple.CoreBrightness.plist"
+sudo /usr/libexec/PlistBuddy -c "Add :CBUser-$generatedUID:CBBlueLightReductionCCTTargetRaw 2700" "/var/root/Library/Preferences/com.apple.CoreBrightness.plist"
+sudo /usr/libexec/PlistBuddy -c "Add :CBUser-$generatedUID:CBBlueReductionStatus:BlueLightReductionDisableScheduleAlertCounter 3" "/var/root/Library/Preferences/com.apple.CoreBrightness.plist"
 sudo /usr/libexec/PlistBuddy -c "Set :CBUser-$generatedUID:CBBlueReductionStatus:BlueReductionEnabled 0" "/var/root/Library/Preferences/com.apple.CoreBrightness.plist"
 sudo /usr/libexec/PlistBuddy -c "Set :CBUser-$generatedUID:CBBlueReductionStatus:BlueReductionMode 0" "/var/root/Library/Preferences/com.apple.CoreBrightness.plist"
 # sudo defaults read /var/root/Library/Preferences/com.apple.CoreBrightness.plist CBUser-$generatedUID
