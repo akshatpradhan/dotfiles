@@ -13,23 +13,27 @@ Open a new terminal tab to activate fish.
 Execute the following commands:
 ```shell
 eval (/opt/homebrew/bin/brew shellenv);
-chezmoi init akshatpradhan;
-chezmoi cd;
-git switch system_defaults;
-chezmoi -v apply;
+chezmoi init --apply akshatpradhan --branch system_defaults;
+```
+
+## Update Packages
+```shell
 chezmoi -v update;
 ```
 
 ## Reset Packages to Core
-To revert to core packages only:
-```
+```shell
 brew bundle cleanup --force --file=~/.Brewfile.core
+```
+
+## Clear Chezmoi state
+```shell
 chezmoi state delete-bucket --bucket=entryState
 ```
 
 ## Work In Progress (WIP)
 Run the following command to capture various defaults:
-```
+```shell
 defaults read > defaults_read && defaults read -g > defaults_read_g && defaults -currentHost read > defaults_read_currenthost &&
 defaults -currentHost read -g > defaults_read_current_host_g
 ```
