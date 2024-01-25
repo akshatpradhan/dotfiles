@@ -1,22 +1,22 @@
 ###############
 # [cpp]
 # taps = []
-# brews = ["gcc", 
-#          "clang-format", 
+# brews = ["gcc",
+#          "clang-format",
 #          "catch2"]
-# casks = []         
-# vscodes = ["ms-vscode.cpptools", 
-#            "cschlosser.doxdocgen", 
-#            "jeff-hykin.better-cpp-syntax", 
+# casks = []
+# vscodes = ["ms-vscode.cpptools",
+#            "cschlosser.doxdocgen",
+#            "jeff-hykin.better-cpp-syntax",
 #            "Hyeon.c-math-viewer"]
 
 # [cs_225]
 # taps = []
 # brews = []
 # casks = ["docker"]
-# vscodes = ["ms-vscode-remote.remote-containers", 
-#            "ms-vscode-remote.remote-ssh", 
-#            "ms-vscode-remote.remote-ssh-edit", 
+# vscodes = ["ms-vscode-remote.remote-containers",
+#            "ms-vscode-remote.remote-ssh",
+#            "ms-vscode-remote.remote-ssh-edit",
 #            "ms-vscode.remote-explorer"]
 
 # [cs_233]
@@ -25,33 +25,33 @@
 # brews = ["icarus-verilog",
 #          "verible"]
 # casks = ["gtkwave"]
-# vscodes = ["AngaBlue.asm-formatter", 
-#            "kdarkhan.mips", 
+# vscodes = ["AngaBlue.asm-formatter",
+#            "kdarkhan.mips",
 #            "teros-technology.teroshdl"] # Verilog Formatter and Syntax Highlight
 
 # [ruby]
 # taps = []
-# brews = ["rbenv", 
-#          "ruby-build", 
-#          "libyaml"]  
+# brews = ["rbenv",
+#          "ruby-build",
+#          "libyaml"]
 # casks = []
-# vscodes = []         
+# vscodes = []
 
-# [python]           
+# [python]
 # taps = []
-# brews = ["pyenv", 
+# brews = ["pyenv",
 #          "xz"]
-# casks = []         
-# vscodes = ["ms-python.black-formatter", 
-#            "ms-python.python", 
-#            "ms-python.vscode-pylance", 
+# casks = []
+# vscodes = ["ms-python.black-formatter",
+#            "ms-python.python",
+#            "ms-python.vscode-pylance",
 #            "njpwerner.autodocstring"]
 #            # yt-dlp # youtube-dl fork with more features and less bugs
 
 # [manim]
 # taps = []
-# brews =  ["ffmpeg", 
-#           "pango", 
+# brews =  ["ffmpeg",
+#           "pango",
 #           "pkg-config"]
 # casks = ["mactex-no-gui"]
 # vscodes = ["Rickaym.manim-sideview"]
@@ -81,11 +81,11 @@
 #          "cyberduck", # File transfer client
 #          "skype", # Video conferencing
 #          "anylist", # Grocery list
-#          "heynote", # Scratchpad for developers 
+#          "heynote", # Scratchpad for developers
 #          "only-switch", # Hidden Menu Bar
 #          "github", # GitHub Desktop (Great for squashing Large # of Commits)
 #          ]
-# vscodes = []    
+# vscodes = []
 
 
 # {{ range .cpp.taps -}}
@@ -180,5 +180,3 @@
 # {{ range .apps.vscodes -}}
 # vscode {{ . | quote }}
 # {{ end -}}
-
-

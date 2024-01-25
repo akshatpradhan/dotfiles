@@ -1,5 +1,6 @@
 #!/usr/bin/env fish
-# Printers & Scanners
+
+# Todo: Move to applications folder?
 # Expand save panel by default
 defaults write -g NSNavPanelExpandedStateForSaveMode -bool true
 defaults write -g NSNavPanelExpandedStateForSaveMode2 -bool true

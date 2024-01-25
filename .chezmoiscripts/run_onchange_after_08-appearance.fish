@@ -1,3 +1,4 @@
 #!/usr/bin/env fish
-# [x] Show scroll bars: Always
+
+# [Always] Show scroll bars
 defaults write -g AppleShowScrollBars -string "Always" # * Working

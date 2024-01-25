@@ -16,5 +16,4 @@
 
 # Click System Settings -> Privacy & Security -> Full Disk Access -> Add Terminal.app
 
-
 Sign in to iCloud and App Store, otherwise installing apps via mas won’t work.

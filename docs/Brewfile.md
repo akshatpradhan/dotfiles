@@ -33,6 +33,4 @@ mas "Scrivener 3", id: 1310686187
 # Soulver has multiple sheets, so has lots of organization
 # Numi is newest and has the newest UI
 
-
-
 # cask "kap" # Screen recording but screenity chrome extension might be better

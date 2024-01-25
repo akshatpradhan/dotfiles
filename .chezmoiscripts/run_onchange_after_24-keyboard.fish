@@ -1,13 +1,14 @@
 #!/usr/bin/env fish
 
-# [Fast] Key repeat Rate
+# [Fast] Key repeat rate (default: Fill this in)
 defaults write -g KeyRepeat -int 2 # * Working
-
-# [Short] Delay until repeat
+# [Short] Delay until repeat (default: Fill this in)
 defaults write -g InitialKeyRepeat -int 15 # * Working
 
+# ==================
 # Keyboard Shortcuts
-# [Modifier Keys] Switch Control and Capslock" # * Working
+# ==================
+# [Modifier Keys] Swap Control and Capslock" # * Working
 defaults -currentHost write -g com.apple.keyboard.modifiermapping.0-0-0 -array-add '
 <dict>
   <key>HIDKeyboardModifierMappingDst</key>
@@ -15,7 +16,6 @@ defaults -currentHost write -g com.apple.keyboard.modifiermapping.0-0-0 -array-a
   <key>HIDKeyboardModifierMappingSrc</key>
   <integer>30064771296</integer>
 </dict>'
-
 defaults -currentHost write -g com.apple.keyboard.modifiermapping.0-0-0 -array-add '
 <dict>
   <key>HIDKeyboardModifierMappingDst</key>
@@ -23,7 +23,6 @@ defaults -currentHost write -g com.apple.keyboard.modifiermapping.0-0-0 -array-a
   <key>HIDKeyboardModifierMappingSrc</key>
   <integer>30064771300</integer>
 </dict>'
-
 defaults -currentHost write -g com.apple.keyboard.modifiermapping.0-0-0 -array-add '
 <dict>
   <key>HIDKeyboardModifierMappingDst</key>
