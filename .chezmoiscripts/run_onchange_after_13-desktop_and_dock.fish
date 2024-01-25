@@ -2,7 +2,7 @@
 # ====
 # Dock
 # ====
-# [36] Size
+# [36] Size (default: 64)
 defaults write com.apple.dock tilesize -int 36 # * Working
 # [72] Magnification (default: off)
 defaults write com.apple.dock magnification -bool true # * Working
@@ -20,13 +20,13 @@ defaults write com.apple.dock orientation -string "left" # * Working
 # =======================
 # [x] Show items on Desktop (default: on) and in Stage Manager (default: off)
 defaults write com.apple.WindowManager HideDesktop -bool false # * Working
-# [One at a Time] Show windows from an application (default: all at once)
+# [One at a Time] Show windows from an application (default: All at Once)
 defaults write com.apple.WindowManager AppWindowGroupingBehavior -int 0 # * Working
 
 # =======
 # Windows
 # =======
-# [always] Prefer tabs when opening documents (default: In Full Screen)
+# [Always] Prefer tabs when opening documents (default: In Full Screen)
 defaults write -g AppleWindowTabbingMode -string "always" # * Working
 
 # ===============
@@ -45,7 +45,7 @@ defaults write com.apple.dock wvous-tl-corner -int 5 # * Working
 # Configure the Dock
 # ==================
 # Note: This should probably be moved to a dock.fish file in applications
-# Delete everything from the dock
+# Empty the dock
 defaults write com.apple.dock persistent-apps -array # * Working
 # Note: To remove duplicated icons and a folder from the Dock, delete the 'recent-apps' and 'persistent-others' keys. This was determined by comparing the output of 'defaults read com.apple.dock' before and after manual removal.
 # defaults delete com.apple.dock recent-apps
