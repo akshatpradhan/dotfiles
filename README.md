@@ -18,7 +18,7 @@ chezmoi --debug init --apply akshatpradhan --branch system_defaults;
 
 ## Update Packages
 ```shell
-chezmoi -v update;
+chezmoi --debug -v update;
 ```
 
 ## Reset Packages to Core

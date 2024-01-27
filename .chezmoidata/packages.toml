@@ -198,7 +198,7 @@ vscodes = [
 taps = []
 brews = []
 casks = [
-  "github", # Desktop client for GitHub repositories  
+  # "github", # Desktop client for GitHub repositories  
   # "rectangle", # Move and resize windows using keyboard shortcuts or snap areas
   # "breaktimer", # Tool to manage periodic breaks
   # "alt-tab", # Enable Windows-like alt-tab
