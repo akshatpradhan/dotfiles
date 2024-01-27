@@ -4,8 +4,8 @@
 [core]
 taps = [
   "homebrew/bundle",
-  "homebrew/services",
-  "homebrew/cask-fonts",
+  # "homebrew/services",
+  # "homebrew/cask-fonts",
 ]
 brews = [
   "chezmoi", # Manage your dotfiles across multiple diverse machines, securely
