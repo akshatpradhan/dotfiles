@@ -44,3 +44,5 @@ end
 
 # Rebuild the index from scratch
 # sudo mdutil -E / > /dev/null
+
+# test
