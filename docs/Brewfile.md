@@ -1,7 +1,6 @@
 # See packages.toml
 
 App Store apps
-
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft OneNote", id: 784801555 # Maybe
 mas "Microsoft PowerPoint", id: 462062816
@@ -14,18 +13,15 @@ mas "Scrivener 3", id: 1310686187
 # Install Eagle, then restore from backup, located in Photos directory
 
 
-
 # Maybe ReadWise to save highlights from books, articles, etc
 # But only if PopClip seems useful. So far, the only thing that seems useful is the copy as Markdown
 # The ChatGPT extensions for PopClip doesn't seem all that great.
 
-
-
 # AI Tools
 # Bolt AI because it's beautiful
-# Intellibar because it's a menu bar that you can copy and paste into anything
 # Quartzite AI because it manages Prompts
 # MacGPT
+# MacBot # Better MacGPT?
 
 ##### Calculator
 # Only Calca might do half-adders

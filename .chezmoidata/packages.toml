@@ -1,64 +1,228 @@
+#=====
+# Core
+#=====
 [core]
 taps = [
   "homebrew/bundle",
   "homebrew/services",
-  "homebrew/cask-fonts"
+  "homebrew/cask-fonts",
 ]
 brews = [
-  "mas", 
-  "chezmoi", 
-  "fish", 
-  "fisher" 
+  # "mas", # Mac App Store command-line interface
+  "chezmoi", # Manage your dotfiles across multiple diverse machines, securely
+  "fish", # User-friendly command-line shell for UNIX-like operating systems
+  # "fisher", # User-friendly command-line shell for UNIX-like operating systems
 ]
-casks = ["1password"]
+casks = [
+  # "1password", # Password manager that keeps all passwords secure behind one password
+  ]
 vscodes = [ ]
 
+
+#=====
+# IDE
+#=====
 [ide]
 taps = [ ]
 brews = [ ]
-casks = ["visual-studio-code" ]
+casks = [
+  "visual-studio-code", # Open-source code editor
+]
 vscodes = [
-  "PenumbraTheme.penumbra",
-  "GitHub.copilot",
-  "GitHub.copilot-chat",
-  "Willumz.generic-pseudocode",
-  "hediet.debug-visualizer",
-  "ms-vscode.hexeditor",
-  "EdwinHuiSH.better-comments-next"
+  "EdwinHuiSH.better-comments-next", # Improve your code commenting by annotating with alert, informational, TODOs, and more
+  # "PenumbraTheme.penumbra", # Perceptually uniform color theme, inspired by sun and shade in nature
+  # "GitHub.copilot", # Your AI pair programmer
+  # "GitHub.copilot-chat", # AI chat features powered by Copilot
+  # "Willumz.generic-pseudocode", # A simple extension for syntax highlighting of generic pseudocode
+  # "hediet.debug-visualizer", # A visual watch window that lets you visualize your data structures while debugging
+  # "ms-vscode.hexeditor", # Allows viewing and editing files in a hex editor
 ]
 
+
+#==========
+# Utilities
+#==========
 [utils]
 taps = [ ]
 brews = [
-  "cheat",
-  "tre-command",
-  "trash",
-  "ugrep",
-  "bat",
-  "bat-extras",
-  "eza",
-  "zoxide",
-  "fzf",
-  "d2"
+  # "tldr", # Simplified and community-driven man pages
+  # "tre-command", # Tree command, improved
+  # "trash", # CLI tool that moves files or folder to the trash
+  # "ugrep", # Ultra fast grep with query UI, fuzzy search, archive search, and more
+  # "bat", # Clone of cat(1) with syntax highlighting and Git integration
+  # "eza", # Modern, maintained replacement for ls
+  # "zoxide", # Shell extension to navigate your filesystem faster
+  # "fzf", Command-line fuzzy finder written in Go
+  # "d2" # Modern diagram scripting language that turns text to diagrams
 ]
 casks = [ ]
-vscodes = [ "terrastruct.d2" ]
+vscodes = [ 
+  # "terrastruct.d2"
+]
 
+
+#======
+# Shell
+#======
 [shell]
 taps = [ ]
 brews = [ 
-  "shfmt", 
-  "shellcheck"
+  "shfmt", # Autoformat shell script source code
+  "shellcheck", # Static analysis and lint tool, for (ba)sh scripts
 ]
 casks = [ ]
 vscodes = [
-  "foxundermoon.shell-format",
-  "timonwong.shellcheck",
-  "bmalehorn.vscode-fish"
+  "foxundermoon.shell-format", # A formatter for shell scripts, Dockerfile, gitignore, dotenv, /etc/hosts, jvmoptions, and other file types
+  "timonwong.shellcheck", # Integrates ShellCheck into VS Code, a linter for Shell scripts
+  "bmalehorn.vscode-fish", # Fish syntax highlighting and formatting
 ]
 
-[apps]
+
+#====
+# CPP
+#====
+[cpp]
+taps = [ ]
+brews = [
+  # "gcc", # GNU compiler collection
+  # "clang-format", # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
+  # "catch2", # Modern, C++-native, header-only, test framework
+]
+casks = [ ]
+vscodes = [
+  # "ms-vscode.cpptools", # C/C++ IntelliSense, debugging, and code browsing
+  # "cschlosser.doxdocgen", # Let me generate Doxygen documentation from your source code for you
+  # "jeff-hykin.better-cpp-syntax", # The bleeding edge of the C++ syntax
+  # "Hyeon.c-math-viewer", # hovers math formula of c mathematical library functions
+]
+
+
+#=======
+# CS 225
+#=======
+[cs_225]
 taps = [ ]
 brews = [ ]
-casks = [ "github" ]
-vscodes = [ ]
+casks = [
+  # "docker", # Pack, ship and run any application as a lightweight container
+]
+vscodes = [
+  # "ms-vscode-remote.remote-containers", # Open any folder or repository inside a Docker container and take advantage of Visual Studio Code's full feature set
+  # "ms-vscode-remote.remote-ssh", # Open any folder on a remote machine using SSH and take advantage of VS Code's full feature set
+  # "ms-vscode-remote.remote-ssh-edit", # Edit SSH configuration files
+  # "ms-vscode.remote-explorer", # View remote machines for SSH and Tunnels
+]
+
+
+#=======
+# CS 233
+#=======
+[cs_233]
+taps = [
+  # "chipsalliance/verible",
+  # "randomplum/gtkwave", 
+]
+brews = [
+  # "icarus-verilog", # Verilog simulation and synthesis tool
+  # "verible", # SystemVerilog developer tools
+]
+casks = [
+  # "gtkwave", # Waveform viewer for FPGA/RTL developers
+]
+vscodes = [
+  # "AngaBlue.asm-formatter", # A formatter extension for VSCode supporting the MIPS assembly language
+  # "kdarkhan.mips", # Provides syntax highlighting and snippets for MIPS assembly language
+  # "teros-technology.teroshdl", # Verilog Formatter and Syntax Highlight
+] 
+
+
+#=====
+# ruby
+#=====
+[ruby]
+taps = []
+brews = [
+  # "rbenv", # Ruby version manager
+  # "ruby-build", # Install various Ruby versions and implementations
+  # "libyaml", # YAML Parser
+]
+casks = []
+vscodes = []
+
+
+#=======
+# Python
+#=======
+[python]
+taps = []
+brews = [
+  # "pyenv", # Python version management
+  # "xz", # General-purpose data compression with high compression ratio
+  # pip install yt-dlp # Fork of youtube-dl with additional features and fixes  
+]
+casks = []
+vscodes = [
+  # "ms-python.black-formatter", # Formatting support for Python files using the Black formatter
+  # "ms-python.python", # IntelliSense (Pylance), Linting, Debugging (Python Debugger), code formatting, refactoring, unit tests, and more.
+  # "ms-python.vscode-pylance", # A performant, feature-rich language server for Python in VS Code
+  # "njpwerner.autodocstring", # Generates python docstrings automatically
+]
+           
+
+#======
+# Manim
+#======
+[manim]
+taps = []
+brews =  [
+  # "ffmpeg", # Play, record, convert, and stream audio and video
+  # "pango", # Framework for layout and rendering of i18n text
+  # "pkg-config", # Manage compile and link flags for libraries
+]
+casks = [
+  # "mactex-no-gui", # TeX Live distribution with GUI applications
+]
+vscodes = [
+  # "Rickaym.manim-sideview", # ideo/Image live previews and code snippets for manim
+]
+# pip install manim?
+# pip install yt-dlp
+# pip install pycairo
+# pip install scipy
+
+
+#=============
+# Applications
+#=============
+[apps]
+taps = []
+brews = []
+casks = [
+  "github", # Desktop client for GitHub repositories  
+  # "rectangle", # Move and resize windows using keyboard shortcuts or snap areas
+  # "breaktimer", # Tool to manage periodic breaks
+  # "alt-tab", # Enable Windows-like alt-tab
+  # "shottr", # Screenshot measurement and annotation tool
+  # "obsidian", # Knowledge base that works on top of a local folder of plain text Markdown files
+  # "mullvad-browser", # Web browser focused on privacy and on minimizing tracking and fingerprinting
+  # "mimestream", # Native app email client for Gmail
+  # "discord", # Voice and text chat software
+  # "arc", # Chromium based browser
+  # "maccy", # Clipboard manager
+  # "iina", # Free and open-source media player
+  # "adobe-acrobat-pro", # View, create, manipulate, print and manage files in Portable Document Format
+  # "zoom", # Video communication and virtual meeting platform
+  # "motrix", # Open-source download manager
+  # "cyberduck", # Server and cloud storage browser
+  # "skype", # Video chat, voice call and instant messaging application
+  # "anylist", # Grocery shopping list
+  # "heynote", # Dedicated scratchpad for developers
+  # "only-switch", # Hidden Menu Bar
+]
+vscodes = []
+
+
+
+
+
+

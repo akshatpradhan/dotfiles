@@ -53,16 +53,97 @@ cask {{ . | quote }}
 vscode {{ . | quote }}
 {{ end -}}
 
-# {{ range .apps.taps -}}
-# tap {{ . | quote }}
-# {{ end -}}
-# {{ range .apps.brews -}}
-# brew {{ . | quote }}
-# {{ end -}}
-# {{ range .apps.casks -}}
-# cask {{ . | quote }}
-# {{ end -}}
-# {{ range .apps.vscodes -}}
-# vscode {{ . | quote }}
-# {{ end -}}
+{{ range .cpp.taps -}}
+tap {{ . | quote }}
+{{ end -}}
+{{ range .cpp.brews -}}
+brew {{ . | quote }}
+{{ end -}}
+{{ range .cpp.casks -}}
+cask {{ . | quote }}
+{{ end -}}
+{{ range .cpp.vscodes -}}
+vscode {{ . | quote }}
+{{ end -}}
+
+{{ range .cs_225.taps -}}
+tap {{ . | quote }}
+{{ end -}}
+{{ range .cs_225.brews -}}
+brew {{ . | quote }}
+{{ end -}}
+{{ range .cs_225.casks -}}
+cask {{ . | quote }}
+{{ end -}}
+{{ range .cs_225.vscodes -}}
+vscode {{ . | quote }}
+{{ end -}}
+
+
+{{ range .cs_233.taps -}}
+tap {{ . | quote }}
+{{ end -}}
+{{ range .cs_233.brews -}}
+brew {{ . | quote }}
+{{ end -}}
+{{ range .cs_233.casks -}}
+cask {{ . | quote }}
+{{ end -}}
+{{ range .cs_233.vscodes -}}
+vscode {{ . | quote }}
+{{ end -}}
+
+
+{{ range .ruby.taps -}}
+tap {{ . | quote }}
+{{ end -}}
+{{ range .ruby.brews -}}
+brew {{ . | quote }}
+{{ end -}}
+{{ range .ruby.casks -}}
+cask {{ . | quote }}
+{{ end -}}
+{{ range .ruby.vscodes -}}
+vscode {{ . | quote }}
+{{ end -}}
+
+{{ range .python.taps -}}
+tap {{ . | quote }}
+{{ end -}}
+{{ range .python.brews -}}
+brew {{ . | quote }}
+{{ end -}}
+{{ range .python.casks -}}
+cask {{ . | quote }}
+{{ end -}}
+{{ range .python.vscodes -}}
+vscode {{ . | quote }}
+{{ end -}}
+
+{{ range .manim.taps -}}
+tap {{ . | quote }}
+{{ end -}}
+{{ range .manim.brews -}}
+brew {{ . | quote }}
+{{ end -}}
+{{ range .manim.casks -}}
+cask {{ . | quote }}
+{{ end -}}
+{{ range .manim.vscodes -}}
+vscode {{ . | quote }}
+{{ end -}}
+
+{{ range .apps.taps -}}
+tap {{ . | quote }}
+{{ end -}}
+{{ range .apps.brews -}}
+brew {{ . | quote }}
+{{ end -}}
+{{ range .apps.casks -}}
+cask {{ . | quote }}
+{{ end -}}
+{{ range .apps.vscodes -}}
+vscode {{ . | quote }}
+{{ end -}}
+
 ' | brew bundle --no-lock --file=/dev/stdin

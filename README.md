@@ -13,7 +13,7 @@ Open a new terminal tab to activate fish.
 Execute the following commands:
 ```shell
 eval (/opt/homebrew/bin/brew shellenv);
-chezmoi init --apply akshatpradhan --branch system_defaults;
+chezmoi --debug init --apply akshatpradhan --branch system_defaults;
 ```
 
 ## Update Packages

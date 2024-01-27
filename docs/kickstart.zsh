@@ -24,12 +24,6 @@ install_rosetta() {
   sudo /usr/sbin/softwareupdate --install-rosetta --agree-to-license
 }
 
-# TODO: Move to an upgrade.sh script
-# install_system_updates() {
-#   print "Installing System Updates..."
-#   sudo /usr/sbin/softwareupdate --all --install --force
-# }
-
 install_mas() {
   print "Installing Mac App Store CLI..."
   eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -54,9 +48,16 @@ install_fish() {
 elevate_root_access
 install_homebrew
 install_rosetta
-# install_system_updates
 install_mas
 install_chezmoi
 install_fish
 print "Remember to give full disk access to Terminal.app"
 open "x-apple.systempreferences:com.apple.preference.security"
+
+# TODO: Move to an upgrade.sh script
+# install_system_updates() {
+#   print "Installing System Updates..."
+#   sudo /usr/sbin/softwareupdate --all --install --force
+# }
+
+# install_system_updates
