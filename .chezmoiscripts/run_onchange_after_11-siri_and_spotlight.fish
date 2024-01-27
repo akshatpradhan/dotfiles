@@ -47,17 +47,17 @@ set items 'APPLICATIONS' true 'MENU_EXPRESSION' true 'CONTACT' false \
 # defaults write com.apple.Spotlight orderedItems -array-add '{ enabled = 0; name = TIPS; },'
 # defaults write com.apple.Spotlight orderedItems -array-add '{ enabled = 1; name = BOOKMARKS; }'
 
-# defaults write com.apple.Spotlight orderedItems -array          
-# #/usr/libexec/PlistBuddy -c "Add :orderedItems array" $plist
-# for i in (seq 1 2 (count $items))
-#   set name $items[$i]
-#   set enabled $items[(math $i + 1)]
-#   set index (math "(($i - 1) / 2)")
+defaults write com.apple.Spotlight orderedItems -array          
+#/usr/libexec/PlistBuddy -c "Add :orderedItems array" $plist
+for i in (seq 1 2 (count $items))
+  set name $items[$i]
+  set enabled $items[(math $i + 1)]
+  set index (math "(($i - 1) / 2)")
 
-#   /usr/libexec/PlistBuddy -c "Add :orderedItems:$index dict" $plist
-#   /usr/libexec/PlistBuddy -c "Add :orderedItems:$index:enabled bool $enabled" $plist
-#   /usr/libexec/PlistBuddy -c "Add :orderedItems:$index:name string $name" $plist
-# end
+  /usr/libexec/PlistBuddy -c "Add :orderedItems:$index dict" $plist
+  /usr/libexec/PlistBuddy -c "Add :orderedItems:$index:enabled bool $enabled" $plist
+  /usr/libexec/PlistBuddy -c "Add :orderedItems:$index:name string $name" $plist
+end
 
 # Optional: Uncomment the lines below to rebuild the Spotlight index
 
