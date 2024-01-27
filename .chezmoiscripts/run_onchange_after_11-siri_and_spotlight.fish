@@ -24,7 +24,7 @@ set items 'APPLICATIONS' true 'MENU_EXPRESSION' true 'CONTACT' false \
           'SPREADSHEETS' true 'SYSTEM_PREFS' true 'TIPS' false 'BOOKMARKS' true
 
 
-defaults write com.apple.Spotlight orderedItems -array ''
+defaults write com.apple.Spotlight orderedItems -array
 defaults write com.apple.Spotlight orderedItems -array-add '{ enabled = 1; name = APPLICATIONS; }'
 defaults write com.apple.Spotlight orderedItems -array-add '{ enabled = 1; name = MENU_EXPRESSION; }'
 defaults write com.apple.Spotlight orderedItems -array-add '{ enabled = 1; name = CONTACT; }'
