@@ -8,10 +8,10 @@ taps = [
   "homebrew/cask-fonts",
 ]
 brews = [
-  # "mas", # Mac App Store command-line interface
   "chezmoi", # Manage your dotfiles across multiple diverse machines, securely
   "fish", # User-friendly command-line shell for UNIX-like operating systems
   # "fisher", # User-friendly command-line shell for UNIX-like operating systems
+  # "mas", # Mac App Store command-line interface  
 ]
 casks = [
   # "1password", # Password manager that keeps all passwords secure behind one password
