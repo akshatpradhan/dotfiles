@@ -62,12 +62,12 @@ defaults write com.apple.Spotlight orderedItems -array-add '{ enabled = 1; name 
 # Optional: Uncomment the lines below to rebuild the Spotlight index
 
 # Load new settings before rebuilding the index
-# killall mds &> /dev/null || true
+killall mds &> /dev/null || true
 
 # Make sure indexing is enabled for the main volume
 # sudo mdutil -i on / > /dev/null
 
 # Rebuild the index from scratch
-# sudo mdutil -E / > /dev/null
+sudo mdutil -E / > /dev/null
 
 # test
