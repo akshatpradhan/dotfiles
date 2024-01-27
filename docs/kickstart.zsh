@@ -47,8 +47,8 @@ install_fish() {
 
 elevate_root_access
 install_homebrew
-install_rosetta
-install_mas
+# install_rosetta
+# install_mas
 install_chezmoi
 install_fish
 print "Remember to give full disk access to Terminal.app"
