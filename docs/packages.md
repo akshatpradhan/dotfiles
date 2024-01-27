@@ -86,6 +86,7 @@
 #          "github", # GitHub Desktop (Great for squashing Large # of Commits)
 #          ]
 # vscodes = []
+# Apps to download: MacBot # ChatGPT in Menu Bar and application
 
 
 # {{ range .cpp.taps -}}

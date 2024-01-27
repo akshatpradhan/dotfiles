@@ -9,11 +9,11 @@ defaults write com.apple.dock magnification -bool true # * Working
 defaults write com.apple.dock largesize -int 72        # * Working
 # [Left] Position on screen (default: bottom)
 defaults write com.apple.dock orientation -string "left" # * Working
-# ! Not sure if I want these settings
+# ! Not sure if I want this settings
 # [x] Minimize windows into application icon (default: off)
 # defaults write com.apple.dock minimize-to-application -bool true
 # [ ] Show suggested and recent apps in Dock (default: on)
-# defaults write com.apple.dock show-recents -bool false
+defaults write com.apple.dock show-recents -bool false
 
 # =======================
 # Desktop & Stage Manager
