@@ -13,7 +13,7 @@
 # ! NOT WORKING. On the first run, the plist is not modified.
 # ! On subsequent runs, the plist changes are applied, but they may not be reflected
 # ! in System Preferences even though 'defaults read' shows correct output.
-set plist "$HOME/Library/Preferences/com.apple.Spotlight.plist"
+set plist $HOME/Library/Preferences/com.apple.Spotlight.plist
 
 # Format: 'Name' <Enabled/Disabled>
 set items 'APPLICATIONS' true 'MENU_EXPRESSION' true 'CONTACT' false \
