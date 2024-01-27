@@ -45,7 +45,7 @@ defaults write com.apple.Spotlight orderedItems -array-add '{ enabled = 1; name 
 defaults write com.apple.Spotlight orderedItems -array-add '{ enabled = 1; name = SPREADSHEETS; },'
 defaults write com.apple.Spotlight orderedItems -array-add '{ enabled = 1; name = SYSTEM_PREFS; },'
 defaults write com.apple.Spotlight orderedItems -array-add '{ enabled = 0; name = TIPS; },'
-defaults write com.apple.Spotlight orderedItems -array-add '{ enabled = 1; name = BOOKMARKS; },'
+defaults write com.apple.Spotlight orderedItems -array-add '{ enabled = 1; name = BOOKMARKS; }'
 
 # defaults write com.apple.Spotlight orderedItems -array          
 # #/usr/libexec/PlistBuddy -c "Add :orderedItems array" $plist
