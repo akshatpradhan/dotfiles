@@ -6,7 +6,7 @@
 # [Sunset to Sunrise] Schedule (default: off)
 # [x] Turn on until sunrise (defualt: off))
 # [More Warm] Color Temperature (default: medium warm)
-# Test at night. Initial script run doesn't apply settings; chezmoi -v update required for changes to take effect.
+# ! Test at night. Initial script run doesn't apply settings; chezmoi -v update required for changes to take effect.
 set plist /var/root/Library/Preferences/com.apple.CoreBrightness.plist
 set generatedUID (dscl . -read ~ GeneratedUID | string replace 'GeneratedUID: ' '')
 sudo /usr/libexec/PlistBuddy -c "Add :CBUser-$generatedUID:CBBlueLightReductionCCTTargetRaw integer 2700" $plist
