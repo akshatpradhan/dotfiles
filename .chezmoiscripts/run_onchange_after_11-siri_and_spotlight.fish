@@ -23,7 +23,8 @@ set items 'APPLICATIONS' true 'MENU_EXPRESSION' true 'CONTACT' false \
           'PDF' true 'PRESENTATIONS' true 'MENU_SPOTLIGHT_SUGGESTIONS' true \
           'SPREADSHEETS' true 'SYSTEM_PREFS' true 'TIPS' false 'BOOKMARKS' true
 
-/usr/libexec/PlistBuddy -c "Add :orderedItems array" $plist
+defaults write com.apple.Spotlight orderedItems -array          
+#/usr/libexec/PlistBuddy -c "Add :orderedItems array" $plist
 for i in (seq 1 2 (count $items))
   set name $items[$i]
   set enabled $items[(math $i + 1)]
