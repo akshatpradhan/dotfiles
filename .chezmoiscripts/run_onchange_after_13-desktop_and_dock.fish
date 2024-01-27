@@ -13,7 +13,7 @@ defaults write com.apple.dock orientation -string "left" # * Working
 # [x] Minimize windows into application icon (default: off)
 # defaults write com.apple.dock minimize-to-application -bool true
 # [ ] Show suggested and recent apps in Dock (default: on)
-defaults write com.apple.dock show-recents -bool false
+defaults write com.apple.dock show-recents -bool false # * Working
 
 # =======================
 # Desktop & Stage Manager
@@ -52,6 +52,6 @@ defaults write com.apple.dock persistent-apps -array # * Working
 # defaults delete com.apple.dock persistent-others
 
 # dock icons of hidden (⌘ + H) applications are translucent (default: off)
-defaults write com.apple.dock showhidden -bool true
+defaults write com.apple.dock showhidden -bool true # * Working
 
 # TODO: Investigate the potential usefulness of Dock stacks, such as RECENT, CS225, and CS233.
