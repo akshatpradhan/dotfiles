@@ -12,13 +12,13 @@ Open a new terminal tab to activate fish.
 ## Install Packages
 Execute the following commands:
 ```shell
-eval (/opt/homebrew/bin/brew shellenv);
-chezmoi --debug init --apply akshatpradhan --branch system_defaults;
+eval (/opt/homebrew/bin/brew shellenv)
+chezmoi --debug init --apply akshatpradhan --branch system_defaults
 ```
 
 ## Update Packages
 ```shell
-chezmoi --debug -v update;
+chezmoi --debug -v update
 ```
 
 ## Reset Packages to Core
