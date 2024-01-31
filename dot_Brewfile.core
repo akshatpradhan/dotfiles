@@ -1,0 +1,10 @@
+tap "homebrew/bundle"
+tap "homebrew/services"
+tap "homebrew/cask-fonts"
+
+# Core
+brew "chezmoi"
+brew "fish"
+# brew "fisher"
+# brew "mas"
+# cask "1password"
