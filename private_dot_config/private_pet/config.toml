@@ -1,0 +1,14 @@
+[General]
+  snippetfile = "/Users/akshatpradhan/.config/pet/snippet.toml"
+  editor = "code --wait"
+  column = 40 # (default: 40)
+  selectcmd = "fzf --layout=reverse --border --height=90% --pointer='*' --cycle --prompt='Snippets> '" # Bring the search familiarity of fish-fzf plugin
+  backend = "gist" # (default: gist)
+  sortby = "recency" # (default: recency)
+
+[Gist]
+  file_name = "pet-snippet.toml"
+  access_token = ""
+  gist_id = ""
+  public = false
+  auto_sync = false

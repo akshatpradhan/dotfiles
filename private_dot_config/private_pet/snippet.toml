@@ -1,0 +1,29 @@
+[[snippets]]
+  description = "Update Chezmoi packages"
+  command = "chezmoi --debug -v update"
+  output = ""
+
+  [[snippets]]
+  description = "Clear Chezmoi state"
+  command = "chezmoi state reset"
+  output = ""
+
+  [[snippets]]
+  description = "Capture various macos defaults"
+  command = "defaults read > defaults_read.plist && defaults read -g > defaults_read_g.plist && defaults -currentHost read > defaults_read_currenthost.plist && defaults -currentHost read -g > defaults_read_current_host_g.plist"
+  output = ""
+
+  [[snippets]]
+  description = "Convert plist to xml"
+  command = "plutil -convert xml1 $HOME/Library/Preferences/$PLIST_NAME.plist -o $HOME/$PLIST_NAME.xml"
+  output = ""
+
+  [[snippets]]
+  description = "Sleep for six seconds"
+  command = "sleep 6"
+  output = ""
+
+  [[snippets]]
+  description = "Sleep for seven seconds"
+  command = "sleep 7"
+  output = ""

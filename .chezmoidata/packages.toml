@@ -6,15 +6,17 @@ taps = [
   "homebrew/bundle",
   # "homebrew/services",
   # "homebrew/cask-fonts",
+  "akshatpradhan/font-meslo-for-powerlevel10k",
 ]
 brews = [
   "chezmoi", # Manage your dotfiles across multiple diverse machines, securely
   "fish", # User-friendly command-line shell for UNIX-like operating systems
-  # "fisher", # User-friendly command-line shell for UNIX-like operating systems
+  "fisher", # User-friendly command-line shell for UNIX-like operating systems
   # "mas", # Mac App Store command-line interface  
 ]
 casks = [
   # "1password", # Password manager that keeps all passwords secure behind one password
+  "font-meslo-for-powerlevel10k", # Meslo Nerd Font patched for Powerlevel10k
   ]
 vscodes = [ ]
 
@@ -43,17 +45,25 @@ vscodes = [
 # Utilities
 #==========
 [utils]
-taps = [ ]
+taps = [
+  "knqyf263/pet"
+]
 brews = [
-  # "tldr", # Simplified and community-driven man pages
-  # "tre-command", # Tree command, improved
-  # "trash", # CLI tool that moves files or folder to the trash
-  # "ugrep", # Ultra fast grep with query UI, fuzzy search, archive search, and more
-  # "bat", # Clone of cat(1) with syntax highlighting and Git integration
-  # "eza", # Modern, maintained replacement for ls
-  # "zoxide", # Shell extension to navigate your filesystem faster
-  # "fzf", Command-line fuzzy finder written in Go
+  "zoxide", # Shell extension to navigate your filesystem faster  
+  "fzf", # Command-line fuzzy finder written in Go
+  "fd", # Simple, fast and user-friendly alternative to find
+  "bat", # Clone of cat(1) with syntax highlighting and Git integration
+  "lsd", # Clone of ls with colorful output, file type icons, and more
+  "tre-command", # Tree command, improved
+  "ugrep", # Ultra fast grep with query UI, fuzzy search, archive search, and more  
+  "trash", # CLI tool that moves files or folder to the trash  
+  "thefuck", # Programmatically correct mistyped console commands
+  "pet", # Simple command-line snippet manager 
+  "difftastic", # Diff that understands syntax
+  # "tlrc", # Simplified and community-driven man pages
   # "d2" # Modern diagram scripting language that turns text to diagrams
+  # "aichat", # ChatGPT cli
+  # "topgrade" # Upgrade all the things
 ]
 casks = [ ]
 vscodes = [ 
@@ -125,6 +135,7 @@ taps = [
 brews = [
   # "icarus-verilog", # Verilog simulation and synthesis tool
   # "verible", # SystemVerilog developer tools
+  # "pcalc", # Calculator for those working with multiple bases, sizes, and close to the bits
 ]
 casks = [
   # "gtkwave", # Waveform viewer for FPGA/RTL developers
