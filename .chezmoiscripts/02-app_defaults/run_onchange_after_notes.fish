@@ -63,5 +63,5 @@ end
 
 
 # Quick Notes
-View -> Customize Toolbar
-Delete | Space | Format | Checklist | Table | Space | Link | Media | Lock
+# View -> Customize Toolbar
+# Delete | Space | Format | Checklist | Table | Space | Link | Media | Lock
