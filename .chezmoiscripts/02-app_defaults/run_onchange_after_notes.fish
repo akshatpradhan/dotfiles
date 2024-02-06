@@ -1,7 +1,9 @@
 #!/usr/bin/env fish
 
-Notes -> Settings
-[iCloud] Default account
+# TODO: Configure using iCloud after configuring iCloud login
+# Notes -> Settings
+# [iCloud] Default account
+
 # =======
 # Toolbar
 # =======
