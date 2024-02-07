@@ -32,6 +32,7 @@ set plist $HOME/Library/Containers/com.apple.Notes/Data/Library/Preferences/com.
 # end  
 
 
+
 /usr/libexec/PlistBuddy -c "Delete 'NSToolbar Configuration MainWindowToolbar:TB Item Identifiers'" $plist
 /usr/libexec/PlistBuddy -c "Add 'NSToolbar Configuration MainWindowToolbar:TB Item Identifiers' array" $plist
 /usr/libexec/PlistBuddy -c "Add 'NSToolbar Configuration MainWindowToolbar:TB Item Identifiers:0' string 'FoldersToolbarItem'" $plist
