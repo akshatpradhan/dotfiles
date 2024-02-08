@@ -16,27 +16,61 @@ set plist $HOME/Library/Preferences/com.apple.Spotlight.plist
 
 
 # Format: 'Name' <Enabled/Disabled>
-set items 'APPLICATIONS' true 'MENU_EXPRESSION' true 'CONTACT' false \
-          'MENU_CONVERSION' true 'MENU_DEFINITION' true 'DOCUMENTS' true \
-          'EVENT_TODO' true 'DIRECTORIES' true 'FONTS' false 'IMAGES' true \
-          'MESSAGES' true 'MOVIES' false 'MUSIC' false 'MENU_OTHER' true \
-          'PDF' true 'PRESENTATIONS' true 'MENU_SPOTLIGHT_SUGGESTIONS' true \
-          'SPREADSHEETS' true 'SYSTEM_PREFS' true 'TIPS' false 'BOOKMARKS' true
 
-defaults write com.apple.Spotlight orderedItems -array          
-#/usr/libexec/PlistBuddy -c "Add :orderedItems array" $plist
-for i in (seq 1 2 (count $items))
-  set name $items[$i]
-  set enabled $items[(math $i + 1)]
-  set index (math "(($i - 1) / 2)")
 
-  /usr/libexec/PlistBuddy -c "Add :orderedItems:$index dict" $plist
-  /usr/libexec/PlistBuddy -c "Add :orderedItems:$index:enabled bool $enabled" $plist
-  /usr/libexec/PlistBuddy -c "Add :orderedItems:$index:name string $name" $plist
+        
+# #/usr/libexec/PlistBuddy -c "Add :orderedItems array" $plist
+# for i in (seq 1 2 (count $items))
+#   set name $items[$i]
+#   set enabled $items[(math $i + 1)]
+#   set index (math "(($i - 1) / 2)")
+
+#   /usr/libexec/PlistBuddy -c "Add :orderedItems:$index dict" $plist
+#   /usr/libexec/PlistBuddy -c "Add :orderedItems:$index:enabled bool $enabled" $plist
+#   /usr/libexec/PlistBuddy -c "Add :orderedItems:$index:name string $name" $plist
+# end
+
+defaults write com.apple.Spotlight orderedItems -array
+
+function toggle_search_result_category
+  set plist ~/Library/Preferences/com.apple.Spotlight.plist
+  /usr/libexec/PlistBuddy -c "Add :orderedItems:$argv[1]:enabled bool $argv[3]" $plist
+  /usr/libexec/PlistBuddy -c "Add :orderedItems:$argv[1]:name string $argv[2]" $plist
 end
 
-defaults read com.apple.Spotlight orderedItems &>/dev/null
+set items \
+"0 APPLICATIONS true" \
+"1 MENU_EXPRESSION true" \
+"2 CONTACT false" \
+"3 MENU_CONVERSION true" \
+"4 MENU_DEFINITION true" \
+"5 DOCUMENTS true" \
+"6 EVENT_TODO true" \
+"7 DIRECTORIES true" \
+"8 FONTS false" \
+"9 IMAGES true" \
+"10 MESSAGES true" \
+"11 MOVIES false" \
+"12 MUSIC false" \
+"13 MENU_OTHER true" \
+"14 PDF true" \
+"15 PRESENTATIONS true" \
+"16 MENU_SPOTLIGHT_SUGGESTIONS true" \
+"17 SPREADSHEETS true" \
+"18 SYSTEM_PREFS true" \
+"19 TIPS false" \
+"20 BOOKMARKS true"
 
+for item in $items
+  set fields (string split " " -- $item)
+  set index $fields[1]
+  set category $fields[2]
+  set enabled $fields[3]
+  toggle_search_result_category $index $category $enabled
+end
+
+# Apply Changes
+defaults read com.apple.Spotlight orderedItems &>/dev/null
 
 # Optional: Uncomment the lines below to rebuild the Spotlight index
 # killall Spotlight
