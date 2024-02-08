@@ -29,6 +29,6 @@ set plist $HOME/Library/Containers/com.apple.Preview/Data/Library/Preferences/co
 /usr/libexec/PlistBuddy -c "Add 'NSToolbar Configuration CommonToolbar_v5.1:TB Item Identifiers:7' string 'search'" $plist
 
 # [Icon and Text] Show
-# /usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration CommonToolbar_v5.1:TB Display Mode'" $plist
-# /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration CommonToolbar_v5.1:TB Display Mode' integer '1'" $plist
+/usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration CommonToolbar_v5.1:TB Display Mode'" $plist
+/usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration CommonToolbar_v5.1:TB Display Mode' integer '1'" $plist
 
