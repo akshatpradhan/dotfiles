@@ -3,7 +3,7 @@
 set plist /var/root/Library/Preferences/com.apple.CoreBrightness.plist
 set generatedUID (dscl . -read ~ GeneratedUID | string replace 'GeneratedUID: ' '')
 
-# ! Test at night. Initial script run doesn't apply settings; chezmoi -v update required for changes to take effect.
+# * Working
 # ===========
 # Night Shift
 # ===========

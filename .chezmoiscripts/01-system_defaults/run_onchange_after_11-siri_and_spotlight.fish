@@ -30,28 +30,28 @@ function toggle_search_results
 end
 
 set items \
-"0 APPLICATIONS true" \
-"1 MENU_EXPRESSION true" \
-"2 CONTACT false" \
-"3 MENU_CONVERSION true" \
-"4 MENU_DEFINITION true" \
-"5 SOURCE false" \  
-"6 DOCUMENTS true" \
-"7 EVENT_TODO true" \
-"8 DIRECTORIES true" \
-"9 FONTS false" \
-"10 IMAGES true" \
-"11 MESSAGES true" \
-"12 MOVIES false" \
-"13 MUSIC false" \
-"14 MENU_OTHER true" \
-"15 PDF true" \
-"16 PRESENTATIONS true" \
-"17 MENU_SPOTLIGHT_SUGGESTIONS true" \
-"18 SPREADSHEETS true" \
-"19 SYSTEM_PREFS true" \
-"20 TIPS false" \
-"21 BOOKMARKS true"
+  "0 APPLICATIONS true" \
+  "1 MENU_EXPRESSION true" \
+  "2 CONTACT false" \
+  "3 MENU_CONVERSION true" \
+  "4 MENU_DEFINITION true" \
+  "5 SOURCE false" \
+  "6 DOCUMENTS true" \
+  "7 EVENT_TODO true" \
+  "8 DIRECTORIES true" \
+  "9 FONTS false" \
+  "10 IMAGES true" \
+  "11 MESSAGES true" \
+  "12 MOVIES false" \
+  "13 MUSIC false" \
+  "14 MENU_OTHER true" \
+  "15 PDF true" \
+  "16 PRESENTATIONS true" \
+  "17 MENU_SPOTLIGHT_SUGGESTIONS true" \
+  "18 SPREADSHEETS true" \
+  "19 SYSTEM_PREFS true" \
+  "20 TIPS false" \
+  "21 BOOKMARKS true"
 
 for item in $items
   set fields (string split " " -- $item)
