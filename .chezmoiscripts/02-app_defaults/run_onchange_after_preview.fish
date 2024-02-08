@@ -7,14 +7,12 @@ set plist $HOME/Library/Containers/com.apple.Preview/Data/Library/Preferences/co
 # ======
 # [Open all files in one window] When opening files (default: Open groups of files in the same window)
 defaults write com.apple.Preview "PVImageOpeningMode" -int 0
-# /usr/libexec/PlistBuddy -c "Delete ':PVImageOpeningMode'" -c "Add ':PVImageOpeningMode' integer '0'" $plist
 
 # ===
 # PDF
 # ===
 # [ ] Add name to annotations (default: on)
 defaults write com.apple.Preview "PVGeneralUseUserName" -bool false
-# /usr/libexec/PlistBuddy -c "Delete ':PVGeneralUseUserName'" -c "Add ':PVGeneralUseUserName' bool 'false'" $plist
 
 # =======================
 # Toolbar for Main Window
@@ -33,6 +31,10 @@ defaults write com.apple.Preview "PVGeneralUseUserName" -bool false
 # [Icon and Text] Show (default: Icon Only)
 /usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration CommonToolbar_v5.1:TB Display Mode'" $plist
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration CommonToolbar_v5.1:TB Display Mode' integer 1" $plist
+
+# =======================
+# Boilerplate Necesstiies
+# =======================
 /usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration CommonToolbar_v5.1:TB Icon Size Mode'" $plist
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration CommonToolbar_v5.1:TB Icon Size Mode' integer 1" $plist
 /usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration CommonToolbar_v5.1:TB Is Shown'" $plist
