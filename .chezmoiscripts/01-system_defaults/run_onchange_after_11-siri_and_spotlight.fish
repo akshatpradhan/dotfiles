@@ -13,11 +13,13 @@ set plist $HOME/Library/Preferences/com.apple.Spotlight.plist
 # Search Results
 # ==============
 # [ ] Contacts (default: on)
+# [ ] Developer (default: on)
 # [ ] Fonts (default: on)
 # [ ] Movies (default: on)
 # [ ] Music (default: on)
 # [ ] Tips (default: on)
 # [ ] Websites (default: on)
+touch /Applications/Xcode.app
 defaults write com.apple.Spotlight orderedItems -array
 # /usr/libexec/PlistBuddy -c 'Delete :orderedItems' $plist
 # /usr/libexec/PlistBuddy -c 'Add :orderedItems array' $plist
@@ -33,22 +35,23 @@ set items \
 "2 CONTACT false" \
 "3 MENU_CONVERSION true" \
 "4 MENU_DEFINITION true" \
-"5 DOCUMENTS true" \
-"6 EVENT_TODO true" \
-"7 DIRECTORIES true" \
-"8 FONTS false" \
-"9 IMAGES true" \
-"10 MESSAGES true" \
-"11 MOVIES false" \
-"12 MUSIC false" \
-"13 MENU_OTHER true" \
-"14 PDF true" \
-"15 PRESENTATIONS true" \
-"16 MENU_SPOTLIGHT_SUGGESTIONS true" \
-"17 SPREADSHEETS true" \
-"18 SYSTEM_PREFS true" \
-"19 TIPS false" \
-"20 BOOKMARKS true"
+"5 SOURCE false" \  
+"6 DOCUMENTS true" \
+"7 EVENT_TODO true" \
+"8 DIRECTORIES true" \
+"9 FONTS false" \
+"10 IMAGES true" \
+"11 MESSAGES true" \
+"12 MOVIES false" \
+"13 MUSIC false" \
+"14 MENU_OTHER true" \
+"15 PDF true" \
+"16 PRESENTATIONS true" \
+"17 MENU_SPOTLIGHT_SUGGESTIONS true" \
+"18 SPREADSHEETS true" \
+"19 SYSTEM_PREFS true" \
+"20 TIPS false" \
+"21 BOOKMARKS true"
 
 for item in $items
   set fields (string split " " -- $item)
