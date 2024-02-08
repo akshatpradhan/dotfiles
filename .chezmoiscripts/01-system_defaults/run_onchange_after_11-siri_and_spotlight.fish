@@ -1,5 +1,13 @@
 #!/usr/bin/env fish
+
 set plist $HOME/Library/Preferences/com.apple.Spotlight.plist
+
+
+
+# ! NOT WORKING. On the first run, the plist is not modified.
+# ! On subsequent runs, the plist changes are applied, but they may not be reflected
+# ! in System Preferences even though 'defaults read' shows correct output.
+
 
 # ==============
 # Search Results
@@ -10,17 +18,11 @@ set plist $HOME/Library/Preferences/com.apple.Spotlight.plist
 # [ ] Music (default: on)
 # [ ] Tips (default: on)
 # [ ] Websites (default: on)
-
-# ! NOT WORKING. On the first run, the plist is not modified.
-# ! On subsequent runs, the plist changes are applied, but they may not be reflected
-# ! in System Preferences even though 'defaults read' shows correct output.
-
 defaults write com.apple.Spotlight orderedItems -array
 # /usr/libexec/PlistBuddy -c 'Delete :orderedItems' $plist
 # /usr/libexec/PlistBuddy -c 'Add :orderedItems array' $plist
 
-function toggle_search_result_category
-
+function toggle_search_results
   /usr/libexec/PlistBuddy -c "Add :orderedItems:$argv[1]:enabled bool $argv[3]" $plist
   /usr/libexec/PlistBuddy -c "Add :orderedItems:$argv[1]:name string $argv[2]" $plist
 end
@@ -53,7 +55,7 @@ for item in $items
   set index $fields[1]
   set category $fields[2]
   set enabled $fields[3]
-  toggle_search_result_category $index $category $enabled
+  toggle_search_results $index $category $enabled
 end
 
 # Apply Changes
