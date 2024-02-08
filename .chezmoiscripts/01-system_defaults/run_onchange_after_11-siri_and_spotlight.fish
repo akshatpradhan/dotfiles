@@ -1,5 +1,5 @@
 #!/usr/bin/env fish
-
+set plist $HOME/Library/Preferences/com.apple.Spotlight.plist
 # ==============
 # Search Results
 # ==============
@@ -13,7 +13,7 @@
 # ! NOT WORKING. On the first run, the plist is not modified.
 # ! On subsequent runs, the plist changes are applied, but they may not be reflected
 # ! in System Preferences even though 'defaults read' shows correct output.
-set plist $HOME/Library/Preferences/com.apple.Spotlight.plist
+
 
 # Format: 'Name' <Enabled/Disabled>
 set items 'APPLICATIONS' true 'MENU_EXPRESSION' true 'CONTACT' false \
@@ -35,15 +35,19 @@ for i in (seq 1 2 (count $items))
   /usr/libexec/PlistBuddy -c "Add :orderedItems:$index:name string $name" $plist
 end
 
+defaults read com.apple.Spotlight orderedItems &>/dev/null
+
+
 # Optional: Uncomment the lines below to rebuild the Spotlight index
+# killall Spotlight
 
 # Load new settings before rebuilding the index
-killall mds &> /dev/null || true
+# killall mds &> /dev/null || true
 
 # Make sure indexing is enabled for the main volume
-sudo mdutil -i on / > /dev/null
+# sudo mdutil -i on / > /dev/null
 
 # Rebuild the index from scratch
-sudo mdutil -E / > /dev/null
+# sudo mdutil -E / > /dev/null
 
 # test
