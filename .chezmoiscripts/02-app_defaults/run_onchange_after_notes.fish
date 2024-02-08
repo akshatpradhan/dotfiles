@@ -28,12 +28,12 @@ set plist $HOME/Library/Containers/com.apple.Notes/Data/Library/Preferences/com.
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration MainWindowToolbar:TB Item Identifiers:12' string 'LockToolbarItem'" $plist
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration MainWindowToolbar:TB Item Identifiers:13' string 'CollaborationToolbarItem'" $plist
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration MainWindowToolbar:TB Item Identifiers:14' string 'SearchToolbarItem'" $plist
-# [Icon and Text] Show (default: Icon Only)
+# [Icon Only] Show (default: Icon Only) (This will change to Icon and Text in new MacOS version))
 /usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration MainWindowToolbar:TB Display Mode'" $plist
-/usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration MainWindowToolbar:TB Display Mode' integer 1" $plist
-# =======================
-# Boilerplate Necesstiies
-# =======================
+/usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration MainWindowToolbar:TB Display Mode' integer 2" $plist
+# =====================
+# Essential Boilerplate
+# =====================
 /usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration MainWindowToolbar:TB Icon Size Mode'" $plist
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration MainWindowToolbar:TB Icon Size Mode' integer 1" $plist
 /usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration MainWindowToolbar:TB Is Shown'" $plist
@@ -57,12 +57,12 @@ set plist $HOME/Library/Containers/com.apple.Notes/Data/Library/Preferences/com.
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Item Identifiers:6' string 'NSToolbarSpaceItem'" $plist
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Item Identifiers:7' string 'LockToolbarItem'" $plist
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Item Identifiers:8' string 'CollaborationToolbarItem'" $plist
-# [Icon and Text] Show (default: Icon Only)
+# [Icon Only] Show (default: Icon Only) (This will change to Icon and Text in new MacOS version))
 /usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Display Mode'" $plist
-/usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Display Mode' integer 1" $plist
-# =======================
-# Boilerplate Necesstiies
-# =======================
+/usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Display Mode' integer 2" $plist
+# =====================
+# Essential Boilerplate
+# =====================
 /usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Icon Size Mode'" $plist
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Icon Size Mode' integer 1" $plist
 /usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Is Shown'" $plist

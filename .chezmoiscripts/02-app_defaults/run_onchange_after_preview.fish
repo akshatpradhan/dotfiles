@@ -31,10 +31,9 @@ defaults write com.apple.Preview "PVGeneralUseUserName" -bool false
 # [Icon and Text] Show (default: Icon Only)
 /usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration CommonToolbar_v5.1:TB Display Mode'" $plist
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration CommonToolbar_v5.1:TB Display Mode' integer 1" $plist
-
-# =======================
-# Boilerplate Necesstiies
-# =======================
+# =====================
+# Essential Boilerplate
+# =====================
 /usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration CommonToolbar_v5.1:TB Icon Size Mode'" $plist
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration CommonToolbar_v5.1:TB Icon Size Mode' integer 1" $plist
 /usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration CommonToolbar_v5.1:TB Is Shown'" $plist
