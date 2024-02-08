@@ -67,5 +67,5 @@ set plist $HOME/Library/Containers/com.apple.Notes/Data/Library/Preferences/com.
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Icon Size Mode' integer 1" $plist
 /usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Is Shown'" $plist
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Is Shown' bool true" $plist
-/usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB SizeMode'" $plist
-/usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB SizeMode' integer 1" $plist
+/usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Size Mode'" $plist
+/usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Size Mode' integer 1" $plist
