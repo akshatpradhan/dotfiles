@@ -38,8 +38,8 @@ set plist $HOME/Library/Containers/com.apple.Notes/Data/Library/Preferences/com.
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration MainWindowToolbar:TB Icon Size Mode' integer 1" $plist
 /usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration MainWindowToolbar:TB Is Shown'" $plist
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration MainWindowToolbar:TB Is Shown' bool true" $plist
-/usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration MainWindowToolbar:TB SizeMode'" $plist
-/usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration MainWindowToolbar:TB SizeMode' integer 1" $plist
+/usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration MainWindowToolbar:TB Size Mode'" $plist
+/usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration MainWindowToolbar:TB Size Mode' integer 1" $plist
 
 
 # ==============================
