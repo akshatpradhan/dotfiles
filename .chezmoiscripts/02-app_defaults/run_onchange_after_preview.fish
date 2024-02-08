@@ -16,18 +16,6 @@ defaults write com.apple.Preview "PVImageOpeningMode" -int 0
 defaults write com.apple.Preview "PVGeneralUseUserName" -bool false
 # /usr/libexec/PlistBuddy -c "Delete ':PVGeneralUseUserName'" -c "Add ':PVGeneralUseUserName' bool 'false'" $plist
 
-# ====
-# View
-# ====
-# ! Manually configure continous scroll  (cmd + 1)
-# [x] Show Tab Bar (default: off)
-defaults write com.apple.Preview "NSWindowTabbingShoudShowTabBarKey-PVWindow-PVWindowController-PVWindowController-VT-FS" -bool true
-# /usr/libexec/PlistBuddy -c "Delete ':NSWindowTabbingShoudShowTabBarKey-PVWindow-PVWindowController-PVWindowController-VT-FS'" -c "Add ':NSWindowTabbingShoudShowTabBarKey-PVWindow-PVWindowController-PVWindowController-VT-FS' bool 'true'" $plist
-# [x] Show Thumbnails (default: Hide Sidebar)
-defaults write com.apple.Preview "PVSidebarViewModeForNewDocuments" -int 1
-#/usr/libexec/PlistBuddy -c "Delete ':PVSidebarViewModeForNewDocuments'" -c "Add ':PVSidebarViewModeForNewDocuments' integer '1'" $plist
-
-
 # =======================
 # Toolbar for Main Window
 # =======================
