@@ -1,5 +1,6 @@
 #!/usr/bin/env fish
 set plist $HOME/Library/Preferences/com.apple.Spotlight.plist
+
 # ==============
 # Search Results
 # ==============
@@ -14,26 +15,12 @@ set plist $HOME/Library/Preferences/com.apple.Spotlight.plist
 # ! On subsequent runs, the plist changes are applied, but they may not be reflected
 # ! in System Preferences even though 'defaults read' shows correct output.
 
-
-# Format: 'Name' <Enabled/Disabled>
-
-
-        
-# #/usr/libexec/PlistBuddy -c "Add :orderedItems array" $plist
-# for i in (seq 1 2 (count $items))
-#   set name $items[$i]
-#   set enabled $items[(math $i + 1)]
-#   set index (math "(($i - 1) / 2)")
-
-#   /usr/libexec/PlistBuddy -c "Add :orderedItems:$index dict" $plist
-#   /usr/libexec/PlistBuddy -c "Add :orderedItems:$index:enabled bool $enabled" $plist
-#   /usr/libexec/PlistBuddy -c "Add :orderedItems:$index:name string $name" $plist
-# end
-
 defaults write com.apple.Spotlight orderedItems -array
+# /usr/libexec/PlistBuddy -c 'Delete :orderedItems' $plist
+# /usr/libexec/PlistBuddy -c 'Add :orderedItems array' $plist
 
 function toggle_search_result_category
-  set plist ~/Library/Preferences/com.apple.Spotlight.plist
+
   /usr/libexec/PlistBuddy -c "Add :orderedItems:$argv[1]:enabled bool $argv[3]" $plist
   /usr/libexec/PlistBuddy -c "Add :orderedItems:$argv[1]:name string $argv[2]" $plist
 end
