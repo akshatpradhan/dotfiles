@@ -1,12 +1,14 @@
 #!/usr/bin/env fish
 
+set plist $HOME/Library/Preferences/com.apple.finder.plist
+
 # =======
 # General
 # =======
 # [ ] External disks (default: on)
-defaults write com.apple.finder "ShowExternalHardDrivesOnDesktop" -bool "false"
+defaults write com.apple.finder "ShowExternalHardDrivesOnDesktop" -bool "false" # * Working
 # [ ] CDs, DVDs, and iPods (default: on)
-defaults write com.apple.finder "ShowRemovableMediaOnDesktop" -bool "false"
+defaults write com.apple.finder "ShowRemovableMediaOnDesktop" -bool "false" # * Working
 
 # Manual
 # Sidebar: Uncheck and reorder position to the following:"
@@ -35,34 +37,34 @@ defaults write com.apple.finder "ShowRemovableMediaOnDesktop" -bool "false"
 # Advanced
 # ========
 # [x] Show all filename extensions (default: off)
-defaults write -g "AppleShowAllExtensions" -bool "true"
+defaults write -g "AppleShowAllExtensions" -bool "true" # * Working
 # [ ] Show warning before changing an extension (default: on)
-defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false # * Working
 # [ ] Show warning before removing from iCloud Drive (default: on)
-defaults write com.apple.finder FXEnableRemoveFromICloudDriveWarning -bool false
+defaults write com.apple.finder FXEnableRemoveFromICloudDriveWarning -bool false # * Working
 # [ ] Show warning before emptying the trash (default: on)
-defaults write com.apple.finder WarnOnEmptyTrash -bool false
-# [x] Keep folders on top in windows when sorting by name (default: off)
-defaults write com.apple.finder _FXSortFoldersFirst -bool true
+defaults write com.apple.finder WarnOnEmptyTrash -bool false # * Working
+# [x] Keep folders on top in windows when sorting by name (default: off) 
+defaults write com.apple.finder _FXSortFoldersFirst -bool true # * Working
 # [x] Keep folders on top on desktop (default: off)
-defaults write com.apple.finder _FXSortFoldersFirstOnDesktop -bool true
+defaults write com.apple.finder _FXSortFoldersFirstOnDesktop -bool true # * Working
 # [Search the Current Folder] When performing a search (default: Search This Mac)
-defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf" # * Working
 
 # ====
 # View
 # ====
 # [x] Show Path Bar (default: off)
-defaults write com.apple.finder "ShowPathbar" -bool "true"
+defaults write com.apple.finder "ShowPathbar" -bool "true" # * Working
 # [x] Show Status Bar (default: off)
-defaults write com.apple.finder "ShowStatusBar" -bool "false"
+defaults write com.apple.finder "ShowStatusBar" -bool "false" # * Working
 
 # =================
 # Show View Options
 # =================
 
 # Global
-defaults write com.apple.finder FXPreferredViewStyle Nlsv
+defaults write com.apple.finder FXPreferredViewStyle Nlsv # ! UNTESTED
 # [x] Always open in list view
 # Recents
 # - [x] Always open in list view
@@ -218,35 +220,38 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
   General -bool true \
   OpenWith -bool true \
   Privileges -bool true
+  # * Working
 
 # =======
 # Toolbar
 # =======
-# Back/Forward | View | Group | Preview | Quick Look | Get Info | New Folder | Delete | Share | Search
-set plist $HOME/Library/Preferences/com.apple.finder.plist
+# Back/Forward | Group | Preview | Action | Get Info | New Folder | Share | Search
+# * Working
 /usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration Browser:TB Item Identifiers'" $plist
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration Browser:TB Item Identifiers' array" $plist
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration Browser:TB Item Identifiers:0' string 'com.apple.finder.BACK'" $plist
-/usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration Browser:TB Item Identifiers:1' string 'com.apple.finder.SWCH'" $plist
-/usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration Browser:TB Item Identifiers:2' string 'com.apple.finder.ARNG'" $plist
-/usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration Browser:TB Item Identifiers:3' string 'com.apple.finder.PTGL'" $plist
-/usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration Browser:TB Item Identifiers:4' string 'com.apple.finder.QUIK'" $plist
-/usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration Browser:TB Item Identifiers:5' string 'com.apple.finder.INFO'" $plist
-/usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration Browser:TB Item Identifiers:6' string 'com.apple.finder.NFLD'" $plist
-/usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration Browser:TB Item Identifiers:7' string 'com.apple.finder.TRSH'" $plist
-/usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration Browser:TB Item Identifiers:8' string 'com.apple.finder.SHAR'" $plist
-/usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration Browser:TB Item Identifiers:9' string 'com.apple.finder.SRCH'" $plist
+/usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration Browser:TB Item Identifiers:1' string 'com.apple.finder.ARNG'" $plist
+/usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration Browser:TB Item Identifiers:2' string 'com.apple.finder.PTGL'" $plist
+/usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration Browser:TB Item Identifiers:3' string 'com.apple.finder.ACTN'" $plist
+/usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration Browser:TB Item Identifiers:4' string 'com.apple.finder.INFO'" $plist
+/usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration Browser:TB Item Identifiers:5' string 'com.apple.finder.NFLD'" $plist
+/usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration Browser:TB Item Identifiers:6' string 'com.apple.finder.SHAR'" $plist
+/usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration Browser:TB Item Identifiers:7' string 'com.apple.finder.SRCH'" $plist
 # [Icon and Text] Show (default: Icon Only)
 /usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration Browser:TB Display Mode'" $plist
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration Browser:TB Display Mode' integer 1" $plist
 
 # Show the ~/Library folder
-chflags nohidden ~/Library
+chflags nohidden ~/Library # * Working
 
 # Show the /Volumes folder
-sudo chflags nohidden /Volumes
+sudo chflags nohidden /Volumes # * Working
 
 # Automatically open a new Finder window when a volume is mounted
-defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
-defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
-defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
+defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true # ! UNTESTED
+defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true # ! UNTESTED
+defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true # ! UNTESTED
+
+
+# Apply Changes
+defaults read com.apple.finder &>/dev/null

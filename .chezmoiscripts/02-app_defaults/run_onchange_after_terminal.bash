@@ -29,13 +29,13 @@ if [[ -f $THEME_FILE ]]; then
     end tell
 EOD
 fi
-defaults write com.apple.terminal "Default Window Settings" -string "penumbra_dark"
+defaults write com.apple.terminal "Default Window Settings" -string "penumbra_dark" # * Working
 
 # [penumbra_dark] On startup, open: new window with profile: (default: Basic)
-defaults write com.apple.terminal "Startup Window Settings" -string "penumbra_dark"
+defaults write com.apple.terminal "Startup Window Settings" -string "penumbra_dark" # * Working
 # New tabs open with: [Default Profile] and [Default Working Directory]
 defaults write com.apple.terminal NewTabSettingsBehavior -int 1
-defaults write com.apple.terminal NewTabWorkingDirectoryBehavior -int 1
+defaults write com.apple.terminal NewTabWorkingDirectoryBehavior -int 1 # * Working
 
 # [ ] Automatically Mark Prompt Lines (default: on)
-defaults write com.apple.Terminal AutoMarkPromptLines -bool false
+defaults write com.apple.Terminal AutoMarkPromptLines -bool false # * Working

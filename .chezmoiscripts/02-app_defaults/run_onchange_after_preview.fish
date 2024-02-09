@@ -6,14 +6,15 @@ set plist $HOME/Library/Containers/com.apple.Preview/Data/Library/Preferences/co
 # Images
 # ======
 # [Open all files in one window] When opening files (default: Open groups of files in the same window)
-defaults write com.apple.Preview "PVImageOpeningMode" -int 0
+defaults write com.apple.Preview "PVImageOpeningMode" -int 0 # * Working
 
 # ===
 # PDF
 # ===
 # [ ] Add name to annotations (default: on)
-defaults write com.apple.Preview "PVGeneralUseUserName" -bool false
+defaults write com.apple.Preview "PVGeneralUseUserName" -bool false # * Working
 
+# ! NOT WORKING
 # =======================
 # Toolbar for Main Window
 # =======================
@@ -40,4 +41,7 @@ defaults write com.apple.Preview "PVGeneralUseUserName" -bool false
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration CommonToolbar_v5.1:TB Is Shown' bool true" $plist
 /usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration CommonToolbar_v5.1:TB Size Mode'" $plist
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration CommonToolbar_v5.1:TB Size Mode' integer 1" $plist
+
+# Apply changes
+defaults read com.apple.preview &>/dev/null
 

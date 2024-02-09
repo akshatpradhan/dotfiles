@@ -146,4 +146,16 @@ cask {{ . | quote }}
 vscode {{ . | quote }}
 {{ end -}}
 
+{{ range .mac_sysadmin.taps -}}
+tap {{ . | quote }}
+{{ end -}}
+{{ range .mac_sysadmin.brews -}}
+brew {{ . | quote }}
+{{ end -}}
+{{ range .mac_sysadmin.casks -}}
+cask {{ . | quote }}
+{{ end -}}
+{{ range .mac_sysadmin.vscodes -}}
+vscode {{ . | quote }}
+{{ end -}}
 ' | brew bundle --no-lock --file=/dev/stdin

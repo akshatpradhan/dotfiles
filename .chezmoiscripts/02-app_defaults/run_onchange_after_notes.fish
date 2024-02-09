@@ -11,7 +11,7 @@ set plist $HOME/Library/Containers/com.apple.Notes/Data/Library/Preferences/com.
 # =======================
 # Left hand side             Right Hand Side
 # Flexible Space | Delete    New Note | Flexible Space | Format | Checklist | Table | Link | Flexible Space | Lock | Share | Search
-/usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration MainWindowToolbar:TB Item Identifiers'" $plist
+/usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration MainWindowToolbar:TB Item Identifiers'" $plist # * Working
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration MainWindowToolbar:TB Item Identifiers' array" $plist
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration MainWindowToolbar:TB Item Identifiers:0' string 'FoldersToolbarItem'" $plist
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration MainWindowToolbar:TB Item Identifiers:1' string 'NSToolbarSidebarTrackingSeparatorItemIdentifier'" $plist
@@ -29,12 +29,12 @@ set plist $HOME/Library/Containers/com.apple.Notes/Data/Library/Preferences/com.
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration MainWindowToolbar:TB Item Identifiers:13' string 'CollaborationToolbarItem'" $plist
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration MainWindowToolbar:TB Item Identifiers:14' string 'SearchToolbarItem'" $plist
 # [Icon Only] Show (default: Icon Only) (This will change to Icon and Text in new MacOS version))
-/usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration MainWindowToolbar:TB Display Mode'" $plist
+/usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration MainWindowToolbar:TB Display Mode'" $plist # * Working
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration MainWindowToolbar:TB Display Mode' integer 2" $plist
 # =====================
 # Essential Boilerplate
 # =====================
-/usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration MainWindowToolbar:TB Icon Size Mode'" $plist
+/usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration MainWindowToolbar:TB Icon Size Mode'" $plist  # * Working
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration MainWindowToolbar:TB Icon Size Mode' integer 1" $plist
 /usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration MainWindowToolbar:TB Is Shown'" $plist
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration MainWindowToolbar:TB Is Shown' bool true" $plist
@@ -46,7 +46,7 @@ set plist $HOME/Library/Containers/com.apple.Notes/Data/Library/Preferences/com.
 # Toolbar for Single Note Window
 # ==============================
 # Delete | Space | Format | Checklist | Table | Link | Space | Lock | Share 
-/usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Item Identifiers'" $plist  &> /dev/null
+/usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Item Identifiers'" $plist # * Working
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Item Identifiers' array" $plist
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Item Identifiers:0' string 'DeleteToolbarItem'" $plist
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Item Identifiers:1' string 'NSToolbarSpaceItem'" $plist
@@ -58,14 +58,17 @@ set plist $HOME/Library/Containers/com.apple.Notes/Data/Library/Preferences/com.
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Item Identifiers:7' string 'LockToolbarItem'" $plist
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Item Identifiers:8' string 'CollaborationToolbarItem'" $plist
 # [Icon Only] Show (default: Icon Only) (This will change to Icon and Text in new MacOS version))
-/usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Display Mode'" $plist
+/usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Display Mode'" $plist  # * Working
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Display Mode' integer 2" $plist
 # =====================
 # Essential Boilerplate
 # =====================
-/usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Icon Size Mode'" $plist
+/usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Icon Size Mode'" $plist  # * Working
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Icon Size Mode' integer 1" $plist
 /usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Is Shown'" $plist
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Is Shown' bool true" $plist
 /usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Size Mode'" $plist
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration ICMSingleNoteWindowToolbarIdentifier:TB Size Mode' integer 1" $plist
+
+# Apply changes
+defaults read com.apple.notes &>/dev/null
