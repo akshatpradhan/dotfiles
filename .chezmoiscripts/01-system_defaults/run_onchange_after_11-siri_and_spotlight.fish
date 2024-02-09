@@ -2,13 +2,8 @@
 
 set plist $HOME/Library/Preferences/com.apple.Spotlight.plist
 
-
-
-# ! NOT WORKING. On the first run, the plist is not modified.
-# ! On subsequent runs, the plist changes are applied, but they may not be reflected
+# ! SORT of working. The plist changes are applied, but they may not be reflected
 # ! in System Preferences even though 'defaults read' shows correct output.
-
-
 # ==============
 # Search Results
 # ==============
@@ -75,5 +70,3 @@ defaults read com.apple.Spotlight orderedItems &>/dev/null
 
 # Rebuild the index from scratch
 # sudo mdutil -E / > /dev/null
-
-# test

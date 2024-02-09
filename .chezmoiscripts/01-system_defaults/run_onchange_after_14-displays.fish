@@ -38,8 +38,3 @@ sudo defaults read com.apple.CoreBrightness &>/dev/null
 # Uncomment for bash usage
 # generatedUID=$(dscl . -read ~ GeneratedUID | sed 's/GeneratedUID: //')
 # sudo defaults read /var/root/Library/Preferences/com.apple.CoreBrightness.plist CBUser-$generatedUID
-
-
-# 14-displays.fish (line 9): Expected a string, but found a redirection
-# set plist "/var/root/Library/Preferences/com.apple.CoreBrightness.plist"
-# sudo defaults read com.apple.CoreBrightness
