@@ -14,9 +14,9 @@ set plist $HOME/Library/Containers/com.apple.notificationcenterui/Data/Library/P
 # [x] Shortcuts (i.e. Shortcuts Folder)
 # [x] Batteries (i.e. Status)
 
-/usr/libexec/PlistBuddy -c "Delete :widgets:DesktopWidgetPlacementStorage:instances" $plist # ! UNTESTED
-/usr/libexec/PlistBuddy -c "Add :widgets:DesktopWidgetPlacementStorage:instances array" $plist
-/usr/libexec/PlistBuddy -c "Add :widgets:DesktopWidgetPlacementStorage:instances:0 data '
+/usr/libexec/PlistBuddy -c "Delete :widgets:instances" $plist # ! UNTESTED
+/usr/libexec/PlistBuddy -c "Add :widgets:instances array" $plist
+/usr/libexec/PlistBuddy -c "Add :widgets:instances:0 data '
 YnBsaXN0MDDSAQIDBFZ3aWRnZXRUdXVpZE8RC19icGxpc3QwMNQB
 AgMEBQYHClgkdmVyc2lvblkkYXJjaGl2ZXJUJHRvcFgkb2JqZWN0
 cxIAAYagXxAPTlNLZXllZEFyY2hpdmVy0QgJVHJvb3SAAawLDBkh
