@@ -7,6 +7,8 @@
 defaults write com.apple.iCal "scroll by weeks in week view" -int 2 # ! UNTESTED
 # Show [16] hours at a time (default: 12)
 defaults write com.apple.iCal "first shown minute of day" -float 409.193817 # ! UNTESTED
+defaults write com.apple.iCal "number of hours displayed" -int 16 # ! UNTESTED
+
 # [30 minutes] Default event duration: (default: 1 hour)
 defaults write com.apple.iCal "Default duration in minutes for new event" -float 30 # ! UNTESTED
 # [Home] Default Calendar (default: Selected calendar)
