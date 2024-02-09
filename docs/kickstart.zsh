@@ -52,7 +52,7 @@ install_homebrew
 install_chezmoi
 install_fish
 print "Remember to give full disk access to Terminal.app"
-open "x-apple.systempreferences:com.apple.preference.security"
+open "x-apple.systempreferences:com.apple.preference.security?Privacy_AllFiles"
 
 # TODO: Move to an upgrade.sh script
 # install_system_updates() {
