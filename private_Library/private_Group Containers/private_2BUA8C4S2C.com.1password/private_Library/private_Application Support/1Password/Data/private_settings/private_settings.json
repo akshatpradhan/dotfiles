@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "updates.updateChannel": "PRODUCTION",
+  "security.authenticatedUnlock.appleTouchId": true,
+  "security.authenticatedUnlock.enabled": true,
+  "app.defaultVaultForSaving": "\"CurrentVaultOrFallback\"",
+  "sidebar.showCategories": true,
+  "updates.autoUpdate": true,
+  "passwordGenerator.size.characters": 15,
+  "passwordGenerator.includeSymbols": true,
+  "sshAgent.sshAuthorizatonModel": "application",
+  "sshAgent.promotionToastDismissed": true,
+  "privacy.checkHibp": false,
+  "app.trayAction": "mainWindow",
+  "ui.ItemDetailWindowsOnTop": false,
+  "developers.cliSharedLockState.enabled": true,
+  "authTags": { }
+}
