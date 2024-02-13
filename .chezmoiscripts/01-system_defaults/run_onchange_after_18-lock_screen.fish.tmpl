@@ -10,4 +10,4 @@ sudo pmset -c displaysleep 30 # * Working
 # It can accept '-' or 'interactive' for secure, interactive authentication.
 # sysadminctl -screenLock immediate -password - # * Working
 
-sysadminctl -screenLock immediate -adminPassword {{ onepasswordRead "op://MacBookChiefExec/Laptop/password" }} # ! UNTESTED
+sysadminctl -screenLock immediate -adminPassword={{ onepasswordRead "op://MacBookChiefExec/Laptop/password" }} # ! UNTESTED
