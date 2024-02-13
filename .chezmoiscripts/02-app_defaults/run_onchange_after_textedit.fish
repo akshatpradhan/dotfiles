@@ -25,3 +25,4 @@ defaults write com.apple.TextEdit SmartDashes -bool false  # * Working
 defaults write com.apple.TextEdit TextReplacement -bool false  # * Working
 
 # Apply changes
+defaults read com.apple.TextEdit &>/dev/null

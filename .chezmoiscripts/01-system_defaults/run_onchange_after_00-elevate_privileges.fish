@@ -14,9 +14,9 @@ function elevate_root_access
   end
 end
 
-function grant_1password_access
-  eval (op signin --account P5ZIYKRZJZAFJD2JT3MOGL5H7E)
-end
+# function grant_1password_access
+  # eval (op signin --account P5ZIYKRZJZAFJD2JT3MOGL5H7E)
+# end
 
 elevate_root_access
 grant_1password_access

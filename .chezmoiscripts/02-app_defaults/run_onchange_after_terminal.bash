@@ -39,3 +39,6 @@ defaults write com.apple.terminal NewTabWorkingDirectoryBehavior -int 1 # * Work
 
 # [ ] Automatically Mark Prompt Lines (default: on)
 defaults write com.apple.Terminal AutoMarkPromptLines -bool false # * Working
+
+# Apply Changes
+defaults read com.apple.Terminal &>/dev/null

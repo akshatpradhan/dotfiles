@@ -32,3 +32,6 @@ defaults write com.apple.Safari ShowFavoritesUnderSmartSearchField -bool false #
 # ========
 # [x] Show full website address (default: off)
 defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true # * Working
+
+# Apply Changes
+defaults read com.apple.Safari &>/dev/null

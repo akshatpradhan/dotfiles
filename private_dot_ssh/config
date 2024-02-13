@@ -1,0 +1,36 @@
+# UIUC EWS Linux Machine CS 128
+Host linux.ews.illinois.edu
+    HostName linux.ews.illinois.edu
+    User kalip2
+    IdentityFile ~/.ssh/kalip2@linux.ews.illinois.edu
+    IdentitiesOnly yes
+    
+Host *.ews.illinois.edu
+    User kalip2
+    IdentityFile ~/.ssh/kalip2@linux.ews.illinois.edu
+    IdentitiesOnly yes
+
+# Parkland Linux Server
+Host remy.parkland.edu
+    HostName remy.parkland.edu
+    User apradhan2
+    IdentityFile ~/.ssh/apradhan2@remy.parkland.edu
+    IdentitiesOnly yes
+
+# UIUC github account: kalip2
+Host uiuc.github.com
+    HostName github.com
+    IdentityFile ~/.ssh/kalip2@uiuc.github.com
+    IdentitiesOnly yes
+
+# Secondary github account: kk723
+Host student.github.com
+    HostName github.com
+    IdentityFile ~/.ssh/kk723@student.github.com
+    IdentitiesOnly yes
+
+# Default github account: akshatpradhan
+Host github.com
+    HostName github.com
+    IdentityFile ~/.ssh/akshatpradhan@github.com
+    IdentitiesOnly yes

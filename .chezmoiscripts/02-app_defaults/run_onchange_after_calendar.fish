@@ -49,3 +49,6 @@ defaults write com.apple.iCal "TimeZone support enabled" -bool true # * Working
 defaults write com.apple.iCal "InviteeDeclineAlerts" -bool false # * Working
 # [ ] Ask before sending changes to events (default: on)
 defaults write com.apple.iCal "WarnBeforeSendingInvitations" -bool false # * Working
+
+# Apply changes
+defaults read com.apple.iCal &>/dev/null

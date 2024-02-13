@@ -12,3 +12,5 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on &>/dev/
 # VPN
 # ===
 # TODO: VPN for NextDNS
+
+

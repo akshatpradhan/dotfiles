@@ -1,13 +1,36 @@
 # dotfiles
 
-## Kickstart Installation on a Mac
+##  Run the macOS Installer
+### Main
+[English] Language
+[United States] Select your Country or Region
+### Vision
+[2nd smallest] Pointer Size
+[auto] Appearacnce
+### Select Your Wi-Fi Network
+[Not now] Migration Assistant
+->Sign In with Your Apple ID
+[x] Enable Location Services on this Mac
+[ ] Share Mac Analytics with Apple
+[Voice 1] Select a Siri Voice
+[Not Now] Improve Siri & Dictation
+Enable TouchID
+Sign in to iCloud and App Store, otherwise installing apps via mas won’t work.
+
+## Kickstart Configuration on a Mac
 Run the following command in the terminal:
 ```shell
-zsh -c "$(curl https://raw.githubusercontent.com/akshatpradhan/dotfiles/$branch_name/docs/kickstart.zsh)"
+zsh -c "$(curl https://raw.githubusercontent.com/akshatpradhan/dotfiles/$branch_name/kickstart.zsh)"
 ```
 
-## Enable fish
-Open a new terminal tab to activate fish.
+## Enable 1Password Desktop
+Open 1password and enter credentials
+
+## Enable Terminal Automation
+Give Terminal full access to Files and Folders
+
+## Close Applications
+Close Applications that are opened by the script
 
 ## Install Packages
 Execute the following commands:
@@ -15,6 +38,15 @@ Execute the following commands:
 eval (/opt/homebrew/bin/brew shellenv)
 chezmoi --debug init --apply akshatpradhan --branch $branch_name
 ```
+
+## Restart
+Restart the computer
+```sudo shutdown -r now```
+
+## Cleanup
+Do the following cleanup steps
+### Calendar
+[ ] Show Holidays calendar (default: on)
 
 ## Update Packages
 ```shell

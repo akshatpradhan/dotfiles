@@ -7,3 +7,6 @@
 # defaults write com.apple.screencapture location -string "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Screenshots"  # ! UNTESTED
 # Disable shadow in screenshots (default: off)
 defaults write com.apple.screencapture "disable-shadow" -bool "true" # * Working
+
+# Apply Changes
+defaults read com.apple.screencapture &>/dev/null

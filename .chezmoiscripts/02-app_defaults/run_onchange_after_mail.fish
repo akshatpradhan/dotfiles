@@ -12,7 +12,7 @@ set plist $HOME/Library/Containers/com.apple.mail/Data/Library/Preferences/com.a
 # defaults write com.apple.mail MailUserNotificationScope -int 4
 # defaults write com.apple.mail MailUserNotificationMailbox -string "smartmailbox://MailBoxHasCode"
 # [x] Automatically try sending later if outoing server is unavailable (default: off)
-defaults write com.apple.mail SuppressDeliveryFailure -bool true # ! NOT WORKING
+defaults write com.apple.mail SuppressDeliveryFailure -bool true # * Working
 # [ ] When searching all mailboxes, include results from: Trash (default: on)
 defaults write com.apple.mail IndexTrash -bool false # ! NOT WORKING
 
@@ -20,20 +20,20 @@ defaults write com.apple.mail IndexTrash -bool false # ! NOT WORKING
 # Viewing
 # =======
 # [x] Mark all messages as read when opening a conversation (default: off)
-defaults write com.apple.mail ConversationViewMarkAllAsRead -bool true # ! NOT WORKING
+defaults write com.apple.mail ConversationViewMarkAllAsRead -bool true # * Working
 
 # =========
 # Composing
 # =========
 # Sending
 # [30 seconds] Undo send delay (default: 10 seconds)
-defaults write com.apple.mail UndoSendDelayTime -int 30 # NOT WORKING
+defaults write com.apple.mail UndoSendDelayTime -int 30 # ! NOT WORKING
 
 # ==========
 # Responding
 # ==========
 # [x] Use the same message format as the original message (default: off)
-defaults write com.apple.mail AutoReplyFormat -bool true # NOT WORKING
+defaults write com.apple.mail AutoReplyFormat -bool true # * WORKING
 
 # =======
 # Privacy
@@ -80,7 +80,7 @@ defaults read com.apple.mail ShowComposeFormatInspectorBar -bool true  # ! NOT W
 /usr/libexec/PlistBuddy -c "Add 'NSToolbar Configuration MainWindow:TB Item Identifiers:10' string 'FlaggedStatus'" $plist
 /usr/libexec/PlistBuddy -c "Add 'NSToolbar Configuration MainWindow:TB Item Identifiers:11' string 'Search'" $plist
 # [Icon and Text] Show
-/usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration MainWindow:TB Display Mode'" $plist  # ! NOT WORKING
+/usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration MainWindow:TB Display Mode'" $plist  # * Working
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration MainWindow:TB Display Mode' integer '1'" $plist
 
 # ===================================

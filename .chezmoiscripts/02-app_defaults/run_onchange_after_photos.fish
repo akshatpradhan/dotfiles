@@ -16,4 +16,5 @@ defaults write com.apple.photoanalysisd notificationDisabled -bool true # * WORK
 # [x] Download Originals to this Mac (default: Optimize Mac Storage)
 defaults write com.apple.photos.shareddefaults downloadAndKeepOriginals -bool true # ! UNTESTED
 
-
+# Apply Changes
+defaults read com.apple.Photos &>/dev/null

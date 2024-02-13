@@ -72,7 +72,8 @@ install_fish() {
 }
 
 open_apps() {
-  print "Opening Mail, Preview, and Reminders..."
+  print "Opening Apps..."
+  open /Applications/Photos.app
   open /System/Applications/Mail.app
   open /System/Applications/Preview.app
   open /System/Applications/Reminders.app
@@ -80,7 +81,8 @@ open_apps() {
 }
 
 close_apps() {
-  print "Closing Mail, Preview, and Reminders..."
+  print "Closing Apps..."
+  osascript -e 'quit app "Photos"'
   osascript -e 'quit app "Mail"'
   osascript -e 'quit app "Preview"'
   osascript -e 'quit app "Reminders"'

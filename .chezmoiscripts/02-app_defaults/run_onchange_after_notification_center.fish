@@ -97,3 +97,5 @@ RDItNDE4OThEMjRDOTFCAAgADQAUABkLfAAAAAAAAAIBAAAAAAAA
 AAUAAAAAAAAAAAAAAAAAAAuj
 '" $plist
 
+# Apply Changes
+defaults read com.apple.notificationcenterui &>/dev/null
