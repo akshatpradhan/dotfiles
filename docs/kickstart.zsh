@@ -76,6 +76,7 @@ open_apps() {
   open /System/Applications/Mail.app
   open /System/Applications/Preview.app
   open /System/Applications/Reminders.app
+  open /Applications/1Password.app
 }
 
 close_apps() {
@@ -83,14 +84,17 @@ close_apps() {
   osascript -e 'quit app "Mail"'
   osascript -e 'quit app "Preview"'
   osascript -e 'quit app "Reminders"'
+  osascript -e 'quit app "1Password"'
 }
 
 elevate_root_access
 install_homebrew
+sudo -v
 # install_rosetta
 # install_mas
 install_chezmoi
 install_1password
+sudo -v
 install_fish
 open_apps
 print "Remember to give full disk access to Terminal.app"
