@@ -237,11 +237,11 @@ vscodes = [ ]
 # ============
 [mac_sysadmin]
 taps = [
-  # "8ta4/plist", 
+  "8ta4/plist", 
 ]
 brews = [ ]
 casks = [ 
-  # "plist", # Tracks plist files and alerts on corresponding PlistBuddy commands
+  "plist", # Tracks plist files and alerts on corresponding PlistBuddy commands
 ]
 vscodes = [ ]
 
