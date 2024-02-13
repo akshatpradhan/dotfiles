@@ -64,7 +64,7 @@ defaults write com.apple.finder "ShowStatusBar" -bool "false" # * Working
 # =================
 
 # Global
-defaults write com.apple.finder FXPreferredViewStyle Nlsv # ! UNTESTED
+defaults write com.apple.finder FXPreferredViewStyle Nlsv # * Working
 # [x] Always open in list view
 # Recents
 # - [x] Always open in list view

@@ -4,11 +4,11 @@
 # General
 # =======
 # [ ] Autoplay Videos and Live Photos (default: on)
-defaults write com.apple.Photos IPXDefaultAutoplayVideos -bool false # ! UNTESTED
+defaults write com.apple.Photos IPXDefaultAutoplayVideos -bool false # ! NOT WORKING
 # [ ] Show Featured Content (default: on)
-defaults write com.apple.photos.shareddefaults FeaturedContentAllowed -bool false # ! UNTESTED
+defaults write com.apple.photos.shareddefaults FeaturedContentAllowed -bool false # * WORKING
 # [ ] Show Memories Notification (default: on)
-defaults write com.apple.photoanalysisd notificationDisabled -bool true # ! UNTESTED
+defaults write com.apple.photoanalysisd notificationDisabled -bool true # * WORKING
 
 # ======
 # iCloud

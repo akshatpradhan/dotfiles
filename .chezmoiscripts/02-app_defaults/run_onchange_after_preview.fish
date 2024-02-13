@@ -14,12 +14,11 @@ defaults write com.apple.Preview "PVImageOpeningMode" -int 0 # * Working
 # [ ] Add name to annotations (default: on)
 defaults write com.apple.Preview "PVGeneralUseUserName" -bool false # * Working
 
-# ! NOT WORKING
 # =======================
 # Toolbar for Main Window
 # =======================
 # Markup | Highlight | Form Filling | Actual Size | Share | Page | Search
-/usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration CommonToolbar_v5.1:TB Item Identifiers'" $plist
+/usr/libexec/PlistBuddy -c "Delete ':NSToolbar Configuration CommonToolbar_v5.1:TB Item Identifiers'" $plist # ! NOT WORKING
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration CommonToolbar_v5.1:TB Item Identifiers' array" $plist
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration CommonToolbar_v5.1:TB Item Identifiers:0' string 'view'" $plist
 /usr/libexec/PlistBuddy -c "Add ':NSToolbar Configuration CommonToolbar_v5.1:TB Item Identifiers:1' string 'edit_banner'" $plist

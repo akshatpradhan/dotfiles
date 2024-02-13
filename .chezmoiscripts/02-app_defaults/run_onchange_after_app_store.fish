@@ -4,4 +4,4 @@
 # Settings
 # ========
 # [ ] In-App Ratings & Reviews (default: on)
-defaults write com.apple.AppStore InAppReviewEnabled -bool false # ! UNTESTED
+defaults write com.apple.AppStore InAppReviewEnabled -bool false # * Working

@@ -36,6 +36,32 @@ install_chezmoi() {
   brew install chezmoi
 }
 
+install_1password() {
+  print "Installing 1Password..."
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+  brew install 1password
+  cat <<EOF >"$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/Library/Application Support/1Password/Data/settings/settings.json"
+{
+  "version": 1,
+  "updates.updateChannel": "PRODUCTION",
+  "security.authenticatedUnlock.appleTouchId": true,
+  "security.authenticatedUnlock.enabled": true,
+  "app.defaultVaultForSaving": "\"CurrentVaultOrFallback\"",
+  "sidebar.showCategories": true,
+  "updates.autoUpdate": true,
+  "passwordGenerator.size.characters": 15,
+  "passwordGenerator.includeSymbols": true,
+  "sshAgent.sshAuthorizatonModel": "application",
+  "sshAgent.promotionToastDismissed": true,
+  "privacy.checkHibp": false,
+  "app.trayAction": "mainWindow",
+  "ui.ItemDetailWindowsOnTop": false,
+  "developers.cliSharedLockState.enabled": true,
+  "authTags": { }
+}
+EOF
+}
+
 install_fish() {
   print "Installing Fish..."
   eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -45,13 +71,31 @@ install_fish() {
   print "Open a new terminal window to use fish as the default shell."
 }
 
+open_apps() {
+  print "Opening Mail, Preview, and Reminders..."
+  open /System/Applications/Mail.app
+  open /System/Applications/Preview.app
+  open /System/Applications/Reminders.app
+}
+
+close_apps() {
+  print "Closing Mail, Preview, and Reminders..."
+  osascript -e 'quit app "Mail"'
+  osascript -e 'quit app "Preview"'
+  osascript -e 'quit app "Reminders"'
+}
+
 elevate_root_access
 install_homebrew
 # install_rosetta
 # install_mas
 install_chezmoi
+install_1password
 install_fish
+open_apps
 print "Remember to give full disk access to Terminal.app"
+print "Remember to launch 1Password and sign in"
+
 open "x-apple.systempreferences:com.apple.preference.security?Privacy_AllFiles"
 
 # TODO: Move to an upgrade.sh script

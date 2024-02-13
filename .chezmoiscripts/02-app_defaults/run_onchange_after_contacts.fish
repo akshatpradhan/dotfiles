@@ -4,5 +4,5 @@
 # General
 # =======
 # [First Name] Sort By (default: Last Name)
-defaults write com.apple.AddressBook ABNameSortingFormat -string "sortingFirstName sortingLastName" # ! UNTESTED
+defaults write com.apple.AddressBook ABNameSortingFormat -string "sortingFirstName sortingLastName" # * Working
 # TODO: [iCloud] Default Account
