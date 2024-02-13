@@ -19,4 +19,4 @@ end
 # end
 
 elevate_root_access
-grant_1password_access
+# grant_1password_access
