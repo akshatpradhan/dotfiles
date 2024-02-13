@@ -15,8 +15,7 @@
 # end
 
 function grant_1password_access
-  echo "Hello"
-
+  eval (op signin --account P5ZIYKRZJZAFJD2JT3MOGL5H7E)
 end
 
 # elevate_root_access

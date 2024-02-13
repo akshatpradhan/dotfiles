@@ -2,7 +2,6 @@
 if status is-interactive
   # Commands to run in interactive sessions can go here
   eval "$(/opt/homebrew/bin/brew shellenv)"
-  eval (op signin --account P5ZIYKRZJZAFJD2JT3MOGL5H7E)
   set -gx EDITOR 'code --wait'
   set -gx VISUAL 'code --wait --new-window'
   set -gx PROJECT_PATHS ~/Code # for oh-my-fish/plugin-pj
