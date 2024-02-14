@@ -8,7 +8,7 @@ set generatedUID (dscl . -read ~ GeneratedUID | string replace 'GeneratedUID: ' 
 # Night Shift
 # ===========
 # [Sunset to Sunrise] Schedule (default: off)
-# [x] Turn on until sunrise (defualt: off))
+# [x] Turn on until sunrise (default: off))
 # [More Warm] Color Temperature (default: medium warm)
 sudo /usr/libexec/PlistBuddy -c "Delete :CBUser-$generatedUID:CBBlueLightReductionCCTTargetRaw" $plist
 sudo /usr/libexec/PlistBuddy -c "Add :CBUser-$generatedUID:CBBlueLightReductionCCTTargetRaw real 2700.000000" $plist

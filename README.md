@@ -48,6 +48,12 @@ Do the following cleanup steps
 ### Calendar
 [ ] Show Holidays calendar (default: on)
 
+### Wallpaper
+[Hawaii Valley]
+
+### Screen Saver
+[Hawaii Valley]
+
 ## Update Packages
 ```shell
 chezmoi --debug -v update
