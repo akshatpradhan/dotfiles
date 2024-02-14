@@ -57,7 +57,7 @@ Do the following cleanup steps
 
 ## Update Packages
 ```shell
-chezmoi --debug -v update
+chezmoi -v --output chezmoi-%F-%T.log update
 ```
 
 ## Reset Packages to Core
