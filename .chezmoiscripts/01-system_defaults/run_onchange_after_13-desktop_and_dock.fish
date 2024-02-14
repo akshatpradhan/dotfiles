@@ -12,8 +12,8 @@ defaults write com.apple.dock orientation -string "left" # * Working
 
 # [x] Minimize windows into application icon (default: off) # ! Not sure if I want this settings
 # defaults write com.apple.dock minimize-to-application -bool true 
-# [ ] Show suggested and recent apps in Dock (default: on) # ! Not sure if I want this settings
-defaults write com.apple.dock show-recents -bool false # * Working 
+# [x] Show suggested and recent apps in Dock (default: on) # ! Not sure if I want this settings
+defaults write com.apple.dock show-recents -bool true # * Working 
 
 # =======================
 # Desktop & Stage Manager

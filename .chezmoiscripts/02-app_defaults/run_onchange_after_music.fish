@@ -3,26 +3,22 @@
 # =======
 # General
 # =======
-
-
 ## Library
 # [x] Sync Library
 # [x] Automatic Downloads
 # [ ] Download Dolby Atmos
 # [x] Always check for available downloads
-# [x] Use Listening History
 
 # Show
-# [ ] iTunes Store (default: on) We actually need this to search in the iTunesStore
+# [ ] iTunes Store (default: off) 
+# We actually need this to search in the iTunesStore
 # defaults write com.apple.Music showStoreInSidebar -bool false
-
-
-# !TODO [x] Star ratings 
+# [x] Star ratings 
 
 # [small] List Size (default: Medium)
 
 # Playback
-# [Off] Play supported songs in Dolby Atmos
+# [Off] Play supported songs in Dolby Atmos (default: Automatic)
 
 # View -> Show View Options
 # [Songs] View as
