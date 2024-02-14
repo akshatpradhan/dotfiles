@@ -36,7 +36,8 @@ Close Applications that are opened by the script
 Execute the following commands:
 ```shell
 eval (/opt/homebrew/bin/brew shellenv)
-chezmoi --debug init --apply akshatpradhan --branch $branch_name
+chezmoi init --apply akshatpradhan --branch $branch_name --ssh --output chezmoi.log
+
 ```
 
 ## Restart
