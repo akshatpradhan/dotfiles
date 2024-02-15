@@ -40,6 +40,8 @@
 	<string>akshatpradhan</string>
 	<key>PayloadIdentifier</key>
 	<string>MacBookAirChiefExec.07D855A4-3886-4332-96CD-0C0641592B61</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
 	<key>PayloadOrganization</key>
 	<string>The human-redable string containing the name of the organization </string>
 	<key>PayloadScope</key>
@@ -50,8 +52,6 @@
 	<string>BC6105FD-8FD3-4C02-AF6C-12C150E2014E</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
-	<key>RemovalDate</key>
-	<date>0025-03-12T16:28:00Z</date>
 	<key>TargetDeviceType</key>
 	<integer>5</integer>
 </dict>
