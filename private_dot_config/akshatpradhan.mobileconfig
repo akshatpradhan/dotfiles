@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ConsentText</key>
+	<dict>
+		<key>default</key>
+		<string>A msg that will be presented on device</string>
+	</dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadDisplayName</key>
+			<string>1Password</string>
+			<key>PayloadIdentifier</key>
+			<string>com.1password.1password.E00030DA-7B5C-4AD1-8586-7C71878A3D0D</string>
+			<key>PayloadType</key>
+			<string>com.1password.1password</string>
+			<key>PayloadUUID</key>
+			<string>E00030DA-7B5C-4AD1-8586-7C71878A3D0D</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>privacy.downloadRichIcons</key>
+			<true/>
+			<key>security.authenticatedUnlock.appleTouchId</key>
+			<true/>
+			<key>security.autolock.onDeviceLock</key>
+			<true/>
+			<key>security.clipboard.clearAfter</key>
+			<true/>
+			<key>updates.autoUpdate</key>
+			<true/>
+			<key>updates.updateChannel</key>
+			<string>PRODUCTION</string>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Expanation of the purpose...</string>
+	<key>PayloadDisplayName</key>
+	<string>akshatpradhan</string>
+	<key>PayloadIdentifier</key>
+	<string>MacBookAirChiefExec.07D855A4-3886-4332-96CD-0C0641592B61</string>
+	<key>PayloadOrganization</key>
+	<string>The human-redable string containing the name of the organization </string>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>BC6105FD-8FD3-4C02-AF6C-12C150E2014E</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+	<key>RemovalDate</key>
+	<date>0025-03-12T16:28:00Z</date>
+	<key>TargetDeviceType</key>
+	<integer>5</integer>
+</dict>
+</plist>

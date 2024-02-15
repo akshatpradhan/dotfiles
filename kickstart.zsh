@@ -36,6 +36,16 @@ install_chezmoi() {
   brew install chezmoi
 }
 
+# =========
+# 1Password
+# =========
+## Appearance
+# [x] Categories (default: off)
+## Advanced
+# [ ] Keep item detail windows on top (default: on)
+## Developer
+# [x] Integrate with 1Password CLI (default: off)
+
 install_1password() {
   print "Installing 1Password..."
   eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -43,17 +53,22 @@ install_1password() {
   cat <<EOF >"$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/Library/Application Support/1Password/Data/settings/settings.json"
 {
   "version": 1,
+  "security.authenticatedUnlock.enabled": true,  
+  "security.authenticatedUnlock.appleTouchId": true,  
+
+  "privacy.checkHibp": false,
+  "updates.autoUpdate": true,
   "updates.updateChannel": "PRODUCTION",
-  "security.authenticatedUnlock.appleTouchId": true,
-  "security.authenticatedUnlock.enabled": true,
+
+
   "app.defaultVaultForSaving": "\"CurrentVaultOrFallback\"",
   "sidebar.showCategories": true,
-  "updates.autoUpdate": true,
+
   "passwordGenerator.size.characters": 15,
   "passwordGenerator.includeSymbols": true,
   "sshAgent.sshAuthorizatonModel": "application",
   "sshAgent.promotionToastDismissed": true,
-  "privacy.checkHibp": false,
+
   "app.trayAction": "mainWindow",
   "ui.ItemDetailWindowsOnTop": false,
   "developers.cliSharedLockState.enabled": true,

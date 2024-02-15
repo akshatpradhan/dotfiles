@@ -6,7 +6,8 @@
 # iCloud
 # ====== 
 # [ ] Optimize Mac Storage (default: on)
-
+/usr/libexec/PlistBuddy -c "Delete ':optimize-storage'" -c "Add ':optimize-storage' bool 'false'" "$HOME/Library/Preferences/com.apple.bird.plist"
+ 
 ## iCloud Drive
 # [x] Desktop & Documents Folders (default: off)
 /usr/libexec/PlistBuddy -c "Delete ':FXICloudDriveDesktop'" -c "Add ':FXICloudDriveDesktop' bool 'true'" "$HOME/Library/Preferences/com.apple.finder.plist"
@@ -47,6 +48,9 @@
 # [x] Music Recognition
 # [x] Shortcuts
 # [x] Arc
+
+/usr/libexec/PlistBuddy -c "Delete ':Accounts:0:Services:16:Enabled'" -c "Add ':Accounts:0:Services:16:Enabled' bool 'false'" "$HOME/Library/Preferences/MobileMeAccounts.plist"
+
 
 ## iCloud+
 # [x] Private Relay
