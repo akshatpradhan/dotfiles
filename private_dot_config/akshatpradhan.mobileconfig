@@ -20,6 +20,8 @@
 			<string>E00030DA-7B5C-4AD1-8586-7C71878A3D0D</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
+			<key>sidebar.showCategories"</key>
+			<true/>
 			<key>privacy.downloadRichIcons</key>
 			<true/>
 			<key>security.authenticatedUnlock.appleTouchId</key>
