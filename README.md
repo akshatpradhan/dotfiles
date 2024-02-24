@@ -24,13 +24,14 @@ zsh -c "$(curl https://raw.githubusercontent.com/akshatpradhan/dotfiles/$branch_
 ```
 
 ## Enable 1Password Desktop
-Open 1password and enter credentials
+[ ] Open 1password and enter credentials
 
 ## Enable Terminal Automation
-Give Terminal full access to Files and Folders
+[ ] Give Terminal full access to Files and Folders
+[ ] Give Terminal access to Accessibility
 
 ## Close Applications
-Close Applications that are opened by the script
+[ ] Close Applications that are opened by the script
 
 ## Install Packages
 Execute the following commands:

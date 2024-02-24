@@ -15,6 +15,7 @@ set plist $HOME/Library/Preferences/com.apple.Spotlight.plist
 # [ ] Tips (default: on)
 # [ ] Websites (default: on)
 touch /Applications/Xcode.app
+sudo mdutil -a -i off # ! Let's try this to see if the checkbox changes
 defaults write com.apple.Spotlight orderedItems -array
 # /usr/libexec/PlistBuddy -c 'Delete :orderedItems' $plist
 # /usr/libexec/PlistBuddy -c 'Add :orderedItems array' $plist

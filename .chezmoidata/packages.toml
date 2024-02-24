@@ -242,7 +242,9 @@ taps = [
 brews = [ 
   "8ta4/plist/plist", # Tracks plist files and alerts on corresponding PlistBuddy commands
 ]
-casks = [ ]
+casks = [ 
+  "mysides",
+]
 vscodes = [ ]
 
 

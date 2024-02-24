@@ -1,6 +1,7 @@
 #!/usr/bin/env fish
 
 # Privacy
+# TODO: Manually
 ## Location Services
 # [x] Enable Location Services
 # [x] Calendar
@@ -14,6 +15,12 @@
 # (Everything else should be off)
 ### System Services
 # [ ] Mac Analytics (default: on)
+## Accessibility
+# [x] AltTab (default: off)
+# [x] Rectangle (default: off)
+# [x] Shottr (default: off)
+# [x] Terminal (default: off)
+# [x] Visual Studio Code (default: off)
 
 ## Microphone
 # [x] Discord

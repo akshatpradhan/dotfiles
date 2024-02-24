@@ -10,28 +10,130 @@ defaults write com.apple.finder "ShowExternalHardDrivesOnDesktop" -bool "false" 
 # [ ] CDs, DVDs, and iPods (default: on)
 defaults write com.apple.finder "ShowRemovableMediaOnDesktop" -bool "false" # * Working
 
-# Manual
-# Sidebar: Uncheck and reorder position to the following:"
-# -[x] Recents
-# -[x] AirDrop
-# -[ ] Applications
-# -[x] Desktop
-# -[x] Documents
-# -[x] Downloads
-# -[ ] Movies
-# -[ ] Music
-# -[ ] Pictures
-# -[x] akshatpradhan
-# -[x] iCloud Drive
-# -[x] Shared
-# -[x] akshatpradhan's MacBook Air
-# -[x] Hard disks
-# -[x] External disks
-# -[x] CDs, DVDs, and iOS Devices
-# -[x] Cloud Storage
-# -[x] Bonjour computers
-# -[x] Connected servers
-# -[x] Recent Tags
+# =======
+# Sidebar
+# =======
+# ! UNTESTED
+osascript -e '
+activate application "Finder"
+
+tell application "System Events"
+	tell process "Finder"
+		
+		delay 1.0
+		select menu bar 1
+		click menu bar item "Finder" of menu bar 1
+		delay 0.5
+		click menu 1 of menu bar item "Finder" of menu bar 1
+		click menu item "Settings…" of menu 1 of menu bar item "Finder" of menu bar 1
+		
+		repeat until exists window "Finder Settings"
+		end repeat
+		
+		click button "Sidebar" of toolbar 1 of window "Finder Settings"
+		
+		# [x] Recents
+		if not (value of checkbox 1 of scroll area 1 of window "Finder Settings" as boolean) then
+			click checkbox 1 of scroll area 1 of window "Finder Settings"
+		end if
+		# [ ] AirDrop
+		if (value of checkbox 2 of scroll area 1 of window "Finder Settings" as boolean) then
+			click checkbox 2 of scroll area 1 of window "Finder Settings"
+		end if
+		# [ ] Applications
+		if (value of checkbox 3 of scroll area 1 of window "Finder Settings" as boolean) then
+			click checkbox 3 of scroll area 1 of window "Finder Settings"
+		end if
+		# [x] Downloads
+		if not (value of checkbox 4 of scroll area 1 of window "Finder Settings" as boolean) then
+			click checkbox 4 of scroll area 1 of window "Finder Settings"
+		end if
+		# [ ] On My Mac
+		if (value of checkbox 5 of scroll area 1 of window "Finder Settings" as boolean) then
+			click checkbox 5 of scroll area 1 of window "Finder Settings"
+		end if
+		# [ ] Movies
+		if (value of checkbox 6 of scroll area 1 of window "Finder Settings" as boolean) then
+			click checkbox 6 of scroll area 1 of window "Finder Settings"
+		end if
+		# [ ] Music
+		if (value of checkbox 7 of scroll area 1 of window "Finder Settings" as boolean) then
+			click checkbox 7 of scroll area 1 of window "Finder Settings"
+		end if
+		# [ ] Pictures
+		if (value of checkbox 8 of scroll area 1 of window "Finder Settings" as boolean) then
+			click checkbox 8 of scroll area 1 of window "Finder Settings"
+		end if
+		# [x] akshatpradhan
+		if not (value of checkbox 9 of scroll area 1 of window "Finder Settings" as boolean) then
+			click checkbox 9 of scroll area 1 of window "Finder Settings"
+		end if
+		# [x] iCloud Drive
+		if not (value of checkbox 10 of scroll area 1 of window "Finder Settings" as boolean) then
+			click checkbox 10 of scroll area 1 of window "Finder Settings"
+		end if
+		# [x] Shared
+		if not (value of checkbox 11 of scroll area 1 of window "Finder Settings" as boolean) then
+			click checkbox 11 of scroll area 1 of window "Finder Settings"
+		end if
+		# [ ] Desktop
+		if (value of checkbox 12 of scroll area 1 of window "Finder Settings" as boolean) then
+			click checkbox 12 of scroll area 1 of window "Finder Settings"
+		end if
+		# [ ] Documents
+		if (value of checkbox 13 of scroll area 1 of window "Finder Settings" as boolean) then
+			click checkbox 13 of scroll area 1 of window "Finder Settings"
+		end if
+		# [ ] MacBookAirChiefExec
+		if (value of checkbox 14 of scroll area 1 of window "Finder Settings" as boolean) then
+			click checkbox 14 of scroll area 1 of window "Finder Settings"
+		end if
+		# [x] Hard disks
+		if not (value of checkbox 15 of scroll area 1 of window "Finder Settings" as boolean) then
+			click checkbox 15 of scroll area 1 of window "Finder Settings"
+		end if
+		# [x] External disks
+		if not (value of checkbox 16 of scroll area 1 of window "Finder Settings" as boolean) then
+			click checkbox 16 of scroll area 1 of window "Finder Settings"
+		end if
+		# [x] CDs, DVDs, and iOS Devices
+		if not (value of checkbox 17 of scroll area 1 of window "Finder Settings" as boolean) then
+			click checkbox 17 of scroll area 1 of window "Finder Settings"
+		end if
+		# [x] Cloud Storage
+		if not (value of checkbox 18 of scroll area 1 of window "Finder Settings" as boolean) then
+			click checkbox 18 of scroll area 1 of window "Finder Settings"
+		end if
+		# [x] Bonjour computers
+		if not (value of checkbox 19 of scroll area 1 of window "Finder Settings" as boolean) then
+			click checkbox 19 of scroll area 1 of window "Finder Settings"
+		end if
+		# [x] Connected servers
+		if not (value of checkbox 20 of scroll area 1 of window "Finder Settings" as boolean) then
+			click checkbox 20 of scroll area 1 of window "Finder Settings"
+		end if
+		# [ ] Recent Tags
+		if (value of checkbox 21 of scroll area 1 of window "Finder Settings" as boolean) then
+			click checkbox 21 of scroll area 1 of window "Finder Settings"
+		end if
+	end tell
+	delay 0.5
+
+  tell application "Finder" to if it is running then close its front window
+end tell
+'
+# ! UNTESTED
+mysides remove all
+mysides add Recents file:///System/Library/CoreServices/Finder.app/Contents/Resources/MyLibraries/myDocuments.cannedSearch/
+mysides add Downloads file:///Users/akshatpradhan/Downloads/
+mysides add Screenshots file:///Users/akshatpradhan/Library/Mobile%20Documents/com~apple~CloudDocs/Screenshots/
+mysides add Desktop file:///Users/akshatpradhan/Desktop/
+mysides add Documents file:///Users/akshatpradhan/Documents/
+mysides add courses file:///Users/akshatpradhan/Documents/courses/
+mysides add Code file:///Users/akshatpradhan/Code/
+mysides add cs225 file:///Users/akshatpradhan/Code/cs225/
+mysides add cs233 file:///Users/akshatpradhan/Code/cs233/
+mysides add akshatpradhan file:///Users/akshatpradhan/
 
 # ========
 # Advanced
@@ -62,11 +164,10 @@ defaults write com.apple.finder "ShowStatusBar" -bool "false" # * Working
 # =================
 # Show View Options
 # =================
-
 # Global
-defaults write com.apple.finder FXPreferredViewStyle Nlsv # * Working
 # [x] Always open in list view
-# Recents
+defaults write com.apple.finder FXPreferredViewStyle Nlsv # * Working
+# Recents # TODO Manually
 # - [x] Always open in list view
 # - [x] Browse in list view
 # - [None] Group By:
